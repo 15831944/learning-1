@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE element.declare [
+  <!ELEMENT element.declare (message,choose+,testing+,nice+,funny+,author+,book+)>
+  <!ELEMENT message (Header,Body,Sig)>
+  <!ELEMENT Header (Date,From,To,Subject)>
+  <!ELEMENT Date (#PCDATA)>
+  <!ELEMENT From (#PCDATA)>
+  <!ELEMENT To (#PCDATA)>
+  <!ELEMENT Subject (#PCDATA)>
+  <!ELEMENT Body (#PCDATA)>
+  <!ELEMENT Sig (#PCDATA)>
+  <!ELEMENT empty.element EMPTY>
+  <!ELEMENT any.element ANY>
+  <!ELEMENT counting (first,second.third,fourth)>
+  <!ELEMENT first (#PCDATA)>
+  <!ELEMENT second (#PCDATA)>
+  <!ELEMENT third (#PCDATA)>
+  <!ELEMENT fourth (#PCDATA)>
+  <!ELEMENT choose (this.one|that.one)>
+  <!ELEMENT this.one (#PCDATA)>
+  <!ELEMENT that.one (#PCDATA)>
+  <!ELEMENT testing (one,two?,three)>
+  <!ELEMENT one (#PCDATA)>
+  <!ELEMENT two (#PCDATA)>
+  <!ELEMENT three (#PCDATA)>
+  <!ELEMENT nice (mmm,mmmm*)>
+  <!ELEMENT mmm (#PCDATA)>
+  <!ELEMENT mmmm (#PCDATA)>
+  <!ELEMENT funny (ha,haha+)>
+  <!ELEMENT ha (#PCDATA)>
+  <!ELEMENT haha (#PCDATA)>
+  <!ELEMENT author (#PCDATA)>
+  <!ATTLIST author id ID #REQUIRED>
+  <!ELEMENT book (#PCDATA)>
+  <!ATTLIST book owner CDATA #REQUIRED
+      id ID #REQUIRED
+      authors IDREFS #REQUIRED>
+] >
+<element.declare>
+  <message>
+    <Header>
+      <Date>14 May 1998</Date>
+      <From>Me</From>
+      <To>You</To>
+      <Subject>Test Message</Subject>
+    </Header>
+    <Body>
+      .... something here
+    </Body>
+    <Sig>
+      Some smart saying
+    </Sig>
+  </message>
+  <choose>
+    <this.one> I chose this one</this.one>
+  </choose>
+  <choose>
+    <that.one>I chose that one</that.one>
+  </choose>
+  <testing>
+    <one>tock</one>
+    <two>tock</two>
+    <three>tock</three>
+  </testing>
+  <testing>
+    <one>tock</one>
+    <three>tock</three>
+  </testing>
+  <nice>
+    <mmm>I can't complein.</mmm>
+  </nice>
+  <nice>
+    <mmm>I like this one</mmm>
+    <mmmm>More,</mmmm>
+    <mmmm>more.</mmmm>
+  </nice>
+  <funny>
+    <ha>Who?</ha>
+    <haha>is he?</haha>
+  </funny>
+  <funny>
+    <ha>I laughed</ha>
+    <haha>until </haha>
+    <haha>I </haha>
+    <haha>thought </haha>
+    <haha>I'd </haha>
+    <haha>die!</haha>
+  </funny>
+  <author id="A51">Author1</author>
+  <author id="A52">Author2</author>
+  <book id="B41" owner="Hammersmith Public Library" authors="A51">A book</book>
+  <book id="B42" owner="Bucharest" authors="A52"> second book</book>
+</element.declare>

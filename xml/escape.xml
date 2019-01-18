@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<escapation>
+  <amp>"&amp;"</amp>
+  <apos>"&apos;"</apos>
+  <greate>"&gt; &lt;"</greate>
+  <quote>"&quot;"</quote>
+</escapation>

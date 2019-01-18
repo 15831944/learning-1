@@ -1,0 +1,22 @@
+<?xml version ="1.0"?>
+<home.page>
+  <head>
+    <title>
+      My Home Page
+    </title>
+    <banner source="topbanner.gif"/>
+  </head>
+  <body>
+    <main.title>
+      Welcome to My Home Page
+    </main.title>
+    <rule/>
+    <text>
+      <para>
+        Sorry, this home page is still under construction.
+        Please come back soon!
+      </para>
+    </text>
+  </body>
+  <footer source="foot.gif"/>
+</home.page>

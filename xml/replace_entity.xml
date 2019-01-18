@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="yes"?>
+<!DOCTYPE home.page [
+  <!ENTITY rights "All rights reserved.">
+  <!ENTITY safe "Harry &#38;#38; Fred &amp; Joe">
+  <!ENTITY unsafe "&#38;#60;emph&#62;Harry and Joe">
+  <!ENTITY safe1 "&#38;#60;emph&#62;Harry and Joe &#38;#60;/emph&#62;">
+]>
+<home.page>
+<head>
+<title>Title Page</title>
+</head>
+<body>
+<h1>The Title Page</h1>
+  <para>
+    (c) 1998, &rights; The job is left to &safe; to fix
+  </para>
+  <text1>
+    <![CDATA[This is the text < 5 lines > that I want the &!%# XML processor to leave alone!]]>
+  </text1>
+  <text>
+   <!-- The job was left to &unsafe;</emph> to finish.-->
+    The job was left to &safe1; to finish.
+  </text>
+</body>
+</home.page>

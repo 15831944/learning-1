@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="input2_1.xsl"?>
+<tutorial>
+<section>
+<title>Gene Splicing for Young People</title>
+<panel>
+<title>Introduction</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>Discovering the secrets of life and creation</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>"I created him for good, but he's turned out evil!"</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>When angry mobs storm your castle</title>
+<!-- ... -->
+</panel>
+</section>
+<section1>
+<title>A Gene Splicing for Young People</title>
+<panel>
+<title>A Introduction</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>A Discovering the secrets of life and creation</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>A "I created him for good, but he's turned out evil!"</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>A When angry mobs storm your castle</title>
+<!-- ... -->
+</panel>
+</section1>
+<section>
+<title>B Gene Splicing for Young People</title>
+<panel>
+<title>B Introduction</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>B Discovering the secrets of life and creation</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>B "I created him for good, but he's turned out evil!"</title>
+<!-- ... -->
+</panel>
+<panel>
+<title>B When angry mobs storm your castle</title>
+<!-- ... -->
+</panel>
+</section>
+<panel>
+<title>C When angry mobs storm your castle</title>
+<!-- ... -->
+</panel>
+
+</tutorial>

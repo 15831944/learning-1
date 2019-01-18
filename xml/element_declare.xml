@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE element.declare [
+  <!ELEMENT message (Header,Body,Sig)>
+  <!ELEMENT Header (Date,From,To,Subject)>
+  <!ELEMENT Date (#PCDATA)>
+  <!ELEMENT From (#PCDATA)>
+  <!ELEMENT To (#PCDATA)>
+  <!ELEMENT empty.element EMPTY>
+  <!ELEMENT any.element ANY>
+  <!ELEMENT counting (first,seocnd.third,fourth)>
+  <!ELEMENT choose (this.one|that.one)>
+  <!ELEMENT lots.of.choice ((maybe|could.be),(this.one,that.one))>
+  <!ELEMENT explained (this.one,that.one,(the.other.one|no.that.one))>
+  <!ELEMENT testing (one,two?,three)>
+  <!ELEMENT nice (mmm,mmmm*)>
+  <!ELEMENT funny (ha,haha+)>
+  <!ELEMENT author (#PCDATA)>
+  <!ATTLIST author id ID #REQUIRED>
+  <!ELEMENT book (#PCDATA)>
+  <!ATTLIST book owner CDATA #REQUIRED
+      id ID #REQUIRED
+      authors IDREFS #REQUIRED>
+] >
+<element.declare>
+  <message>
+    <Header>
+      <Date>14 May 1998</Date>
+      <From>Me</From>
+      <To>You</To>
+      <Subject>Test Message</Subject>
+    </Header>
+    <Body>
+      .... something here
+    </Body>
+    <Sig>
+      Some smart saying
+    </Sig>
+  </message>
+  <choose>
+    <this.one> I chose this one</this.one>
+  </choose>
+  amd then <choose>
+    <that.one>I chose that one</that.one>
+  </choose>
+  <testing>
+    <one>tock</one>
+    <two>tock</two>
+    <three>tock</three>
+  </testing>
+  <testing>
+    <one>tock</one>
+    <three>tock</three>
+  </testing>
+  <nice>
+    <mmm>I can't complein.</mmm>
+  </nice>
+  <nice>
+    <mmm>I like this one</mmm>
+    <mmmm>More,</mmmm>
+    <mmmm>more.</mmmm>
+  </nice>
+  <funny>
+    <ha>Who?</ha>
+    <haha>is he?</haha>
+  </funny>
+  <funny>
+    <ha>I laughed</ha>
+    <haha>until </haha>
+    <haha>I </haha>
+    <haha>thought </haha>
+    <haha>I'd </haha>
+    <haha>die!</haha>
+  </funny>
+  <author id="A51">Author1</author>
+  <book id="B41" owner="Hammersmith Public Library" authors="A51">A book</book>
+  <book id="B42" authors="A52"> second book</book>
+</element.declare>

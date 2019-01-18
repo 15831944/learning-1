@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+print("Integers\n");
+$value=1234567890;
+print("First value is ",$value,"\n");
+$value=1234567890123456;
+print("Second value is ",$value,"\n");
+$value=12345678901234567890;
+print("Thirt value is ",$value,"\n");
+print("Floating Point\n");
+$value=34.0;
+print("First value is ",$value,"\n");
+$value=114.6e-01;
+print("Second value is ",$value,"\n");
+$value=178.263e+19;
+print("Third value is ",$value,"\n");
+$value=1234567890000000000000000000;
+print("Forth value is ",$value,"\n");
+$value=1.23e+999;
+print("Fifth value is ",$value,"\n");
+$value=1.23e-999;
+print("Sixth value is ",$value,"\n");

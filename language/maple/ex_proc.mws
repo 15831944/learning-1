@@ -1,0 +1,20 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 1 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {PARA 0 "" 0 "" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "nume:=proc(f1,a,b,c,d)" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 8 "local f;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "f:=unapply(f1,c,
+d);" }{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "f(a,b);" }
+{MPLTEXT 1 0 0 "" }{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+4 "end:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "func:=X^2+Y-2;" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%%funcG,(*$%\"XG\"\"#\"\"\"%\"YGF)!
+\"#F)" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "b:=nume(func,10,10
+,X,Y);" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%\"bG\"$3\"" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "b;" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#\"$3\"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "0 0
+" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }
