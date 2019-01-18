@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE music [
+  <!ELEMENT music (artists,disks)>
+  <!ELEMENT artists (artist+)>
+  <!ELEMENT artist (name,label,title)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT label (#PCDATA)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT disks (disk+)>
+  <!ELEMENT disk (title,date,number)>
+  <!ELEMENT date (#PCDATA)>
+  <!ELEMENT number (#PCDATA)>
+] >
+<music>
+  <artists>
+   <artist>
+     <name>Cyndi Lauper</name>
+     <label>Sony</label>
+     <title>Twelve Deadly Guns</title>
+   </artist>
+   <artist>
+     <name>Kate Bush</name>
+     <label>EMI</label>
+     <title>Hounds of Love</title>
+   </artist>
+  </artists>
+  <disks>
+   <disk>
+     <title>Twelve Deadly Guns</title>
+     <date>1994</date>
+     <number>EPC 477363 2</number>
+   </disk>
+   <disk>
+     <title>Hounds Of Love</title>
+     <date>1985</date>
+     <number>CDP 7 46164 2</number>
+   </disk>
+  </disks>
+</music>

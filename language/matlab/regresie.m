@@ -1,0 +1,20 @@
+function regresie()
+p=[1 -6 11 -6];
+x=0:.25:4;
+y=polyval(p,x)+randn(size(x));
+c=polyfit(x,y,3);
+poli3=polyval(c,x);
+figure(1);
+plot(x,poli3,x,y,'o');grid;
+x=[-2 -1 0 2 4];
+y=[-19 -3 1 -3 17];
+c2=polyfit(x,y,2);
+c5=polyfit(x,y,5);
+c7=polyfit(x,y,7);
+x1=-2:.1:4;
+y2=polyval(c2,x1);
+y5=polyval(c5,x1);
+y7=polyval(c7,x1);
+yi=spline(x,y,x1);
+figure(2);
+plot(x1,yi,x1,y2,x1,y5,x1,y7,x,y,'o');grid;

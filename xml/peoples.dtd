@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- this dtd will be included -->
+<!ELEMENT People (Person)+>
+<!ELEMENT Person (Name, Address?, PhoneNumber?,FaxNumber?, Email?, Notes?)>
+<!ATTLIST Person Type (Business | Personal) "Business">
+<!ATTLIST Title Position (Before | After) "Before">
+<!--<!ELEMENT Person (Name, Address, PhoneNumber,FaxNumber, Email, Notes)>-->
+<!ELEMENT Name (FirstName?, MiddleName?, FamilyName,Title?)>
+<!ELEMENT Address (Street1?, Street2?, City?, State?,Country?, ZipCode?)>
+<!ELEMENT FirstName (#PCDATA)>
+<!ELEMENT MiddleName (#PCDATA)>
+<!ELEMENT FamilyName (#PCDATA)>
+<!ELEMENT Title (#PCDATA)>
+<!ELEMENT Street1 (#PCDATA)>
+<!ELEMENT Street2 (#PCDATA)>
+<!ELEMENT City (#PCDATA)>
+<!ELEMENT State (#PCDATA)>
+<!ELEMENT Country (#PCDATA)>
+<!ELEMENT ZipCode (#PCDATA)>
+<!ELEMENT PhoneNumber (#PCDATA)>
+<!ELEMENT FaxNumber (#PCDATA)>
+<!ELEMENT Email (#PCDATA)>
+<!ELEMENT Notes (#PCDATA)>
+<!--
+<!ENTITY % Data "(FirstName, FirstName, MiddleName,FamilyName, Title,
+ Street1, Street2,
+ City, State, Country, ZipCode, PhoneNumber, FaxNumber, Email, Notes)">
+<!ENTITY %Data (#PCDATA)> -->

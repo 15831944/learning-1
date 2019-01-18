@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<contacts>
+  <contact>
+    <name>
+      <first>John</first>
+      <last>Belcjer</last>
+    </name>
+    <address>
+      <street>Pennington 13322</street>
+      <city>Washington</city>
+      <state>DC</state>
+      <zip>66522</zip>
+    </address>
+    <tel>555 1276</tel>
+    <fax>555 9983</fax>
+    <mobile>887 8887 7777</mobile>
+    <email>jb@shouthside.com</email>
+  </contact>
+</contacts>

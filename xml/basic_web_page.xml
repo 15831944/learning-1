@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE page [
+  <!ELEMENT page (head,body)>
+  <!ELEMENT head (title)>
+  <!ELEMENT title (#PCDATA)>
+  <!ELEMENT para (#PCDATA)>
+  <!ELEMENT body (title?,para)+>
+] >
+<page>
+ <head>
+   <title>My Home Page</title>
+ </head>
+ <body>
+   <title>Welcome to My Home Page</title>
+   <para>
+     Sorry, this home page is still
+     under construction. Please come
+     back soon!
+   </para>
+ </body>
+</page>

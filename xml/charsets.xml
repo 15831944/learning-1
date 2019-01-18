@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE para1 [
+  <!ENTITY % iso-lat1 PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN//XML"
+                    "http://www.oasis-open.org/docbook/xmlcharent/0.3/iso-lat1.ent">
+  %iso-lat1;
+]>
+<para1>
+  <para number="first"> this is the first paragraph.</para>
+  <para number='second' color='red'>this is the second paragraph.</para>
+    this is third one <!-- I do not know why but is the third one--> &egrave; &egrave;
+</para1>

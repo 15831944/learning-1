@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?protext objid="I5678" ?>
+<!DOCTYPE helptopic [
+  <!ENTITY doubleclick "Double-click">
+]>
+ <helptopic>
+    <title keyword="printing,network;printing,shared printer">
+    How to use a shared network printer?
+  </title>
+  <procedure>
+    <step>
+      <action>
+        In <icon>Network Neighborhood</icon>, locate and
+        Òdouble-click the computer where the printer you want to use is
+        located.
+      </action>
+      <tip targetgroup="beginners">
+        To see which computers have
+        shared printers attached, click the <menu>View</menu> menu,
+        click <menu>Details</menu>, &amp; look for printer names or
+        Òdescriptions in the Comment column of the Network
+        Neighborhood window.
+      </tip>
+    </step>
+    <step>
+      <action>
+        &doubleclick; the printer icon in the window that
+        Òappears.
+      </action>
+    </step>
+    <step>
+      <action>
+        To set up the printer, <xref linkend="id45">
+          follow the instructions
+        </xref> on the screen.
+      </action>
+    </step>
+  </procedure>
+  <rule form="double"/>
+    <tip>
+      <P>
+        After you have set up a network printer, you can use it as
+        if it were attached to your computer. For related topics, look up
+        Ò&quot;printing&quot; in the Help Index.
+      </P>
+    </tip>
+</helptopic>

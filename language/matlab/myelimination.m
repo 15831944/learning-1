@@ -1,0 +1,9 @@
+function [celim,Y]=myelimination(A)
+mv=mean(A(:));
+sigma=std(A(:));
+[n,p]=size(A);
+e=ones(n,p);
+dist=abs(A-e*mv);
+mcond=dist<3*e*sigma;
+Y=A(:,find(all(mcond)));
+celim=p-length(find(all(mcond)));
