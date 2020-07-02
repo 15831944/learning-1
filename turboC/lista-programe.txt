@@ -1,0 +1,53 @@
+sqr - exemplu de dialog cu consola
+instr1 - exemplu de instructiuni de decizie
+instr2 - exemplu de instructiuni de decizie si ciclare
+sirchar1 - exemplu de citere de string de la tastatura
+opattr1 - exemplu de trunchieri in operatii de atribuire
+opbit - exemplu de operatii pe biti
+ie1 - functii de intrare iesire varianta 1 utilizind if/else
+ie2 - functii de intrare iesire varianta 2 utilizind switch
+ie3 - functii de intrare iesire varianta 3 utilizind switch si while
+ie4 - functii de intrare iesire varianta 4 utilizind switch si for
+sirchar2 - exemple de siruri de caractere
+ptr1 - operatii cu pointeri
+ptr2 - pointeri la sir, vectori si matrici
+dinamic - alocare dinamica a unui vector de float, introducere si printarea la consola
+fct1 - exemplu de definitii de functii
+fct2 - transferul parametrilor prin referinta
+subsir - cauta un subsir intr-un sir returneaza pozitia, tranfer prin referinta
+pseudo - generator de numere pseudoaleatoare
+testrnd.prj - proiect pentru generarea de numere pseudoaleatoare din mai multe surse
+erori_de - erori la const pe pointeri si siruri
+cifru - program de cifrare utilizind pointeri la const
+cmdline - exemplu de interactiune in linie de comanda cu functia main
+pfunc1 - exemplu de comparatie utilizind pointer la functia criteriu de comparatie
+pfunc2 - exemplu de sortare utilizind pointer la functie
+vargs - exemplu de utilizare numar variabil de parametrii in functie
+vargs1 - exemplu grafic de utilizare numar variabil de parametrii in functie
+fact - calcul factorial utilizind functii recursive
+fifos - lista FIFO in implementarea statica
+listad - lista dinamica ordonata crescator
+cimpurib - cimpuri de biti
+file1 - copiaza continutul dintr-un fisier de intrare in al fisier de iesire
+file2 - pune intr-un fisier numit graf.txt 2 valori ale grafului si apoi le listeaza (scrieri in format binar)
+file3 - pune intr-un fisier numit graf.txt 2 valori ale grafului si apoi le listeaza (scrieri in format ASCII)
+file4 - similar cu file 3 doar ca ai posibilatea de modificare a unei intrari din fisier
+file5 - similar cu file4 doar in format binar si poate sa afiseze si o inregistrare dupa numarul ei
+viewf - vizualizeaza un fisier utilizind blocuri de 256 bytes
+str1 - exemplu de utilizare sprintf si scanf
+minasm - exemple de asm in C
+intr1 - exemplu de intrerupere SW pentru DOS
+intr2 - exemplu de intrerupere HW pt ceas
+graph1 - exemplu de conio procesare de texte
+graph2 - exemplu de conio afisare in coordonate
+graph3 - exemplu de ferestre facute cu conio (mod text)
+graph4 - afisare cu diferite culori si intesitati (mod text)
+graph5 - initializarea modului grafic
+graph6 - lucru grafic cu culori si paleta
+graph7 - grafic in care sunt facute linii
+graph8 - dreptunghiuri hasurate cu toate modelele
+graph9 - similar cu graph8 dar cu bar3d
+graph10 - copiere si punere de imagini in mod grafic
+graph11 - afisarea textului in mod grafic
+
+

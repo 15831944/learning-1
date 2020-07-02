@@ -1,0 +1,1 @@
+Exemple din Turbo C++ de Octavian Catrina si Iuliana Cojocaru editura Teora ISBN 973-501-108-9
