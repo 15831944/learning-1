@@ -1,0 +1,39 @@
+inout1 - exemplu de intrare-iesire
+trref1 - transfer prin referinta in functii
+trref2 - transfer prin referinta in functii
+param1 - parametrii cu valori implicite in funtie
+param2 - parametrii cu valori implicite in funtie
+param3 - nu se compileaza ar trebui sa ia referinta
+fct1 - overloading la functii
+new1 - alocare de memorie pina se termina utilizare handler pt memorie
+rezolutie - operatorul de rezolutie
+fifo1 - lista create cu ajutorul unei classe
+fifo2 - lista cu exemplificare constructori si destructori
+trval - exemple de obiecte temporare la transferul in functii
+static1 - metode si membrii statici
+friend - functii si metode prietene
+const - functii si obiecte constante
+tablou - exemplificarea apelarii constructorilor fara parametrii
+constr1 - exemplu de clase cu clase interne si pointeri la membrii clasei
+fifo project - exemplu de fifo in fisiere diferite fifo.h, fifo.cpp si testfifo.cpp
+op1 - suprascrierea operatorilor cu functie friend
+op2 - suprascrierea operatorilor cu functii membre
+op3 - suprascrierea operatorilor cu functie membra = pe fifo
+op4 - suprascrierea operatorilor cu functia membra [] pe fifo
+op5 - suprascrierea operatorilor new si delete pe fifo
+op6 - suprascrierea operatorilor unari ++ --
+cast1 - suprascrierea operatorului de cast float
+cast2 - suprascrierea operatorului de cast pt clase si operatori + = ar trebuie sa fie dupa 4
+cast3 - cum nu merg operatori imbricati intre clase (nu se compileaza)
+cast4 - suprascrierea operatorului +
+deriv1 - derivarea (mostenirea claselor)
+deriv2 - similar cu deriv1
+deriv3 - mostenire multipla
+deriv4 - deriv2 cu functii virtual
+deriv5 - derivare de axway
+listad - lista dublu inlantuita
+graph - biblioteca (inlantuire de clase) pentru grafica
+iomanip - io manipulatori
+overinou - supreascriere operatori >> si <<
+complexf - scriere si citire utilizind << si >> dintr-un fisier a clasei complex
+strmem - utilizare strstream
