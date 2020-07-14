@@ -3,10 +3,11 @@ all:
 	cd rcat && make
 	cd hangman && make
 	cd warehouse && make
+	cd watchaccess && make
 	
 clean:
 	cd rdir && make clean
 	cd rcat && make clean
 	cd hangman && make clean
 	cd warehouse && make clean
-	
+	cd watchaccess && make clean
