@@ -4,6 +4,7 @@ all:
 	cd hangman && make
 	cd warehouse && make
 	cd watchaccess && make
+	cd rpc && make
 	
 clean:
 	cd rdir && make clean
@@ -11,3 +12,4 @@ clean:
 	cd hangman && make clean
 	cd warehouse && make clean
 	cd watchaccess && make clean
+	cd rpc && make clean
