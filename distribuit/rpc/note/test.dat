@@ -1,0 +1,11 @@
+p	A	21	10	31	4 	a	
+p	B	22	9	32	7	b	
+Linie care va fi ignorata
+q	A	
+q	J	
+d	B	
+d	T	
+p	I	23	8	33	5	i	
+p	J	24	7	34	8	j	
+q	A
+q	I		
