@@ -1,0 +1,13 @@
+; Exemple din Antrenamente LISP de Mihaela Malita, Editura Universitatii din Bucuresti 1998
+(+ 1 1)
+(+ 1 2 3)
+(+ 1(* 2 3))
+(+ (* 2 2)(* 3 3)(* 4 4))
+(DEFUN DUBLU (N) (+ N N))
+(DUBLU 5)
+(DEFUN SALUT() (PRINT 'Buna!))
+(SALUT)
+'(ACEASTA ESTE O LISTA)
+'(SI (ASTA) ESTE O LISTA)
+(EQUAL 3 4)
+(> 8 3)

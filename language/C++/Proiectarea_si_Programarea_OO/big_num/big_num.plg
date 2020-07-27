@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: big_num - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\WINDOWS\TEMP\RSP341.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/big_num.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"e:\MY-DATA\WORK\PROJECTS-FACULTY\POO\big_num\big_num.cpp"
+"e:\MY-DATA\WORK\PROJECTS-FACULTY\POO\big_num\bigint.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP341.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP0342.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/big_num.pdb" /debug /machine:I386 /out:"Debug/big_num.exe" /pdbtype:sept 
+".\Debug\big_num.obj"
+".\Debug\bigint.obj"
+".\Debug\nod.obj"
+".\Debug\StdAfx.obj"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP0342.TMP"
+<h3>Output Window</h3>
+Compiling...
+big_num.cpp
+bigint.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+big_num.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
