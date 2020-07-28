@@ -1,0 +1,24 @@
+Coduri din cartea Grafica in TurboC de Profesor Octavian Aspru
+Editura ADIAS Rm. Valcea 1994
+
+ex001.cpp exemplu de utilizare a modului text
+ex002.cpp exemplu de initializare mod grafic (deseneaza dreptunghi si afiseaza text)
+ex003.cpp exemplu de initgraph
+ex004.cpp exemplu de closegraph
+ex005.cpp exemplu de restorecrtmode
+ex006.cpp exemplu de setgraphmode
+ex007.cpp exemplu de graphdefaults
+ex008.cpp exemplu de getmaxmode
+ex009.cpp exemplu de getmodename
+ex010.cpp exemplu de getmoderange
+ex011.cpp exemplu de installuserdriver nefunctional din lipsa de driver
+ex012.cpp exemplu de detectgraph
+ex013.cpp exemplu de getdrivername
+ex014.cpp exemplu de getgraphmode
+ex015.cpp exemplu de setviewport
+ex016.cpp exemplu de cleardevice
+ex017.cpp exemplu de clearviewport
+ex018.cpp exemplu de getmaxx getmaxy
+ex019.cpp exemplu de getviewsettings
+ex020.cpp exemplu de setlinestyle
+ex021.cpp exemplu de getlinesettings
