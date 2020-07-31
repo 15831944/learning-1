@@ -22,3 +22,59 @@ ex018.cpp exemplu de getmaxx getmaxy
 ex019.cpp exemplu de getviewsettings
 ex020.cpp exemplu de setlinestyle
 ex021.cpp exemplu de getlinesettings
+ex022.cpp exemplu de setwritemode
+ex023.cpp exemplu de floodfill
+ex024.cpp exemplu de setfillstyle 
+ex025.cpp exemplu de setfillpattern
+ex026.cpp exemplu de getfillsettings
+ex027.cpp exemplu de getfillpattern
+ex028.cpp exemplu de setbkcolor
+ex029.cpp exemplu de setcolor
+ex030.cpp exemplu de getmaxcolor
+ex031.cpp exemplu de setpalette
+ex032.cpp exemplu de getpalette
+ex033.cpp exemplu de getpalettesize
+ex034.cpp exemplu de setallpalette
+ex035.cpp exemplu de setrgbpalette
+ex036.cpp exemplu de getpixel
+ex037.cpp exemplu de getbkcolor
+ex038.cpp exemplu de getcolor nu prea afiseaza culoarea
+ex039.cpp exemplu de getdefaultpalette
+ex040.cpp exemplu de getx si gety
+ex041.cpp exemplu de moveto
+ex042.cpp exemplu de moverel
+ex043.cpp exemplu de putpixel
+ex044.cpp exemplu de line
+ex045.cpp exemplu de lineto
+ex046.cpp exemplu de linerel
+ex047.cpp exemplu de rectangle
+ex048.cpp exemplu de bar
+ex049.cpp exemplu de drawpoly
+ex050.cpp exemplu de fillpoly
+ex051.cpp exemplu de circle
+ex052.cpp exemplu de ellipse
+ex053.cpp exemplu de fillellipse
+ex054.cpp exemplu de arc
+ex055.cpp exemplu de pieslice
+ex056.cpp exemplu de sector
+ex057.cpp exemplu de getarccoords
+ex058.cpp exemplu de bar3d
+ex059.cpp exemplu de setaspectratio/getaspectratio
+ex060.cpp exemplu de proiectie in 3d a unei suprafete
+ex061.cpp exemplu de catel desenat cu 13 curbe bspline
+ex062.cpp exemplu de fractali
+ex063.cpp exemplu de gettextettings
+ex064.cpp exemplu de installuserfont
+ex065.cpp exemplu de registerbgifont nu se compileaza
+ex066.cpp exemplu de settextjustify
+ex067.cpp exemplu de settextstyle
+ex068.cpp exemplu de setusercharsize
+ex069.cpp exemplu de textwidth
+ex070.cpp exemplu de textheight
+ex071.cpp exemplu de outtext
+ex072.cpp exemplu de outtextxy
+ex073.cpp exemplu de setactivepage
+ex074.cpp exemplu de setvisualpage
+ex075.cpp program de animatie prin stergerea figurii prin redesenare cu background
+ex076.cpp program de animatie prin stergerea figurii prin xOR cu setwritemode
+ex077.cpp program de animatie prin getimage, putimage
