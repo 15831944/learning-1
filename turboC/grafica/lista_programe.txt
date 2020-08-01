@@ -78,3 +78,20 @@ ex074.cpp exemplu de setvisualpage
 ex075.cpp program de animatie prin stergerea figurii prin redesenare cu background
 ex076.cpp program de animatie prin stergerea figurii prin xOR cu setwritemode
 ex077.cpp program de animatie prin getimage, putimage
+ex078.cpp program de animatie utilizind tehnica baza pe functiile de manipulare a paginilor
+ex079.cpp exemplu de graphresult
+ex080.cpp exemplu de grapherrormsg
+ex081.cpp exemplu de getimage
+ex082.cpp exemplu de putimage
+83 si 84 - eroare compilare si crapa daca se face cast void far * conversie la void *
+ex083.cpp program care salveaza o imagine intr-un fisier pe disk
+ex084.cpp program care incarca o imagine dintr-un fisier de pe disk
+ex085.cpp exemplu de _graphgetmem and _graphfreemem
+ex086.cpp exemplu de setgraphbufsize
+ex087.cpp exemplu de coreleft
+ex088.cpp exemplu de allocmem si _dos_allocmem
+ex089.cpp exemplu de freemem si _dos_freemem
+ex090.cpp exemplu de farmalloc si farfree
+ex091.cpp exemplu de farcalloc si farfree
+ex092.cpp exemplu de farrealloc
+ex093.cpp exemplu de farcoreleft
