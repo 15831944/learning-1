@@ -1,0 +1,17 @@
+lista programelor
+besier.cpp curba besier - crapa la rulare ...
+rasarit.cpp exemplu de pseudoanimatie utilizind paleta de culori - nu arata soarele pe lcd
+biciclet.cpp exemplu de pseudoanimatie a unei biciclete
+feriga.cpp fractal dinamic tip feriga - nu arata a feriga ... ceva in neregula cu scalarea
+mandel.cpp fractal madelbrot
+txtmouse.cpp exemplu de mouse in modul text
+grmouse.cpp exemplu de mouse in modul graphic
+spline.cpp exemplu de curbe b-spline
+umpoly.cpp exemplu de program care umple un poligon
+clipp1.cpp exemplu de clipping al unui segment
+clipp2.cpp exemplu de clipping de poligon
+supraf.cpp exemplu de ascunderea suprafetelor (crapa cu abnormal)
+casa.cpp exemplu de ascundere suprafete ... casa citata din fisier si rotita
+mach.cpp exemplu de machetare se utilizeaza cu produse.cpp
+produse.cpp exemplu de introducere intr-un fisier prin machetare
+pcxview.cpp citeste si afiseaza un fisier pcx (nu arata imaginea bine)
