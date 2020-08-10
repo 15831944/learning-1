@@ -1,5 +1,5 @@
 CC = gcc
-EXECUTABLES = onexit pthread_cleanup child_demo1
+EXECUTABLES = onexit pthread_cleanup child_demo1 child_demo2 child_demo3
 OBJECTS = child.o
 OTHER_FILES = 
 
@@ -16,6 +16,12 @@ child.o: child.c child.h
 
 child_demo1: child_demo1.c child.o
 	$(CC) -o child_demo1 child_demo1.c child.c
+	
+child_demo2: child_demo2.c child.o
+	$(CC) -o child_demo2 child_demo2.c child.c
+
+child_demo3: child_demo3.c child.o
+	$(CC) -o child_demo3 child_demo3.c child.c
 			
 clean:
 	for object in $(EXECUTABLES);\
