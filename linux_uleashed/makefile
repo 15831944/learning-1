@@ -5,6 +5,7 @@ all:
 	cd memory && make
 	cd ipc && make
 	cd libs && make
+	cd graphics && make
 clean:
 	cd iorutines && make clean
 	cd process && make clean
@@ -12,4 +13,5 @@ clean:
 	cd memory && make clean
 	cd ipc && make clean
 	cd libs && make clean
+	cd graphics && make clean
 	
