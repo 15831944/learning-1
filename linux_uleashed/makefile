@@ -6,6 +6,8 @@ all:
 	cd ipc && make
 	cd libs && make
 	cd graphics && make
+	cd secure && make
+	cd debugging && make
 clean:
 	cd iorutines && make clean
 	cd process && make clean
@@ -14,4 +16,6 @@ clean:
 	cd ipc && make clean
 	cd libs && make clean
 	cd graphics && make clean
+	cd secure && make clean
+	cd debugging && make clean
 	
