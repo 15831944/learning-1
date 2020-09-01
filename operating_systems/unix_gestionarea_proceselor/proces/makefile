@@ -1,10 +1,10 @@
 CC = gcc
 AR = ar
-EXECUTABLES = arguments test_fork fork ex_exit ex_wait double_fork ex_fork ex_fork_sync
+EXECUTABLES = arguments test_fork fork ex_exit ex_wait double_fork ex_fork ex_fork_sync limits times
 OBJECTS = 
 OTHER_FILES = 
 
-all: $(EXECUTABLES)
+all: $(EXECUTABLES) $(OBJECTS)
 
 arguments: arguments.c
 	$(CC) -fPIC -o arguments arguments.c
@@ -28,7 +28,13 @@ ex_fork:ex_fork.c ../common/err.o
 	$(CC) -fPIC -o ex_fork ex_fork.c ../common/err.o
 	
 ex_fork_sync:ex_fork_sync.c ../common/err.o
-	$(CC) -fPIC -o ex_fork_sync ex_fork_sync.c ../common/err.o			
+	$(CC) -fPIC -o ex_fork_sync ex_fork_sync.c ../common/err.o
+
+limits:limits.c ../common/err.o
+	$(CC) -fPIC -o limits limits.c ../common/err.o
+
+times:times.c ../common/err.o ../common/print_exit.o
+	$(CC) -fPIC -o times times.c ../common/err.o ../common/print_exit.o
 clean:
 	for object in $(EXECUTABLES);\
 	do \

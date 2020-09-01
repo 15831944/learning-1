@@ -1,0 +1,3 @@
+/dev/tty4 /bin/date
+/dev/tty2 /bin/ls -l /root
+/dev/tty3 /bin/ls /root
