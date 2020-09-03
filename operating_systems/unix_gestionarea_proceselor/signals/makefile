@@ -1,7 +1,7 @@
 CC = gcc
 AR = ar
 EXECUTABLES = captureSignal reentrant sigchld exalarm exsetjmp sigaction sigaction1 sigpending sigsetjmp sigsuspend1 sigsuspend2 sleep_ex \
-	sig_controll sig_system sig_system2 sig_system4 sig_proc_terminate sig_critical_srv2 sig_critical_srv4 finalApp
+	sig_controll sig_system sig_system2 sig_system4 sig_proc_terminate sig_critical_srv2 sig_critical_srv4 finalApp fil
 OBJECTS = print_mask.o sig.o sync.o sig_abort.o sys2.o sys4.o
 OTHER_FILES = 
 
@@ -84,6 +84,9 @@ sig_critical_srv4:sig_critical_srv4.c ../common/err.o sig.o print_mask.o
 
 finalApp:finalApp.c ../common/err.o
 	$(CC) -fPIC -o finalApp finalApp.c ../common/err.o
+
+fil:fil.c ../common/err.o sig.o
+	$(CC) -fPIC -o fil fil.c ../common/err.o sig.o
 	
 clean:
 	for object in $(EXECUTABLES);\
