@@ -11,6 +11,7 @@ err.o: err.c hdr.h
 
 print_exit.o:print_exit.c print_exit.h
 	$(CC) -c print_exit.c
+
 	
 clean:
 	for object in $(EXECUTABLES);\
