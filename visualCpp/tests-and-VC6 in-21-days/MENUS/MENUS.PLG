@@ -1,0 +1,40 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: menus - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/menus.res" /d "_DEBUG" /d "_AFXDLL" "E:\work\VisualC-in-21-days\menus\menus.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1183.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/menus.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\VisualC-in-21-days\menus\menus.cpp"
+"E:\work\VisualC-in-21-days\menus\menusDlg.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1183.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1184.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/menus.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\VisualC-in-21-days\menus\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1184.TMP" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/menus.pdb" /debug /machine:I386 /out:"Debug/menus.exe" /pdbtype:sept  ".\Debug\menus.obj" ".\Debug\menusDlg.obj" ".\Debug\StdAfx.obj" ".\Debug\menus.res" "
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+menus.cpp
+menusDlg.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+menus.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

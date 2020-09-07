@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: day2_controls - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "d:\TEMP\RSP5184.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/day2_controls.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\work\VisualC\day2_controls\day2_controlsDlg.cpp"
+]
+Creating command line "cl.exe @d:\TEMP\RSP5184.TMP" 
+Creating command line "link.exe /nologo /subsystem:windows /incremental:yes /pdb:"Debug/day2_controls.pdb" /debug /machine:I386 /out:"Debug/day2_controls.exe" /pdbtype:sept  .\Debug\day2_controls.obj .\Debug\day2_controlsDlg.obj .\Debug\StdAfx.obj .\Debug\day2_controls.res "
+<h3>Output Window</h3>
+Compiling...
+day2_controlsDlg.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+day2_controls.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

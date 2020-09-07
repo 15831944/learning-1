@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: serialize - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc09 /fo"Debug/serialize.res" /d "_DEBUG" /d "_AFXDLL" "E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\serialize.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP8372.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/serialize.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\MainFrm.cpp"
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\Person.cpp"
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\serialize.cpp"
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\serializeDoc.cpp"
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\serializeView.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP8372.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP8373.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/serialize.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"E:\my-data\tests-tutorials\VisualC-in-21-days\serialize\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP8373.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP8374.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/serialize.pdb" /debug /machine:I386 /out:"Debug/serialize.exe" /pdbtype:sept 
+".\Debug\MainFrm.obj"
+".\Debug\Person.obj"
+".\Debug\serialize.obj"
+".\Debug\serializeDoc.obj"
+".\Debug\serializeView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\serialize.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP8374.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+MainFrm.cpp
+Person.cpp
+serialize.cpp
+serializeDoc.cpp
+serializeView.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+serialize.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: day11 - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0xc09 /fo"Debug/day11.res" /d "_DEBUG" /d "_AFXDLL" "e:\WORK\VISUALC-IN-21-DAYS\day11\day11.rc"" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP1396.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/day11.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"e:\WORK\VISUALC-IN-21-DAYS\day11\ChildFrm.cpp"
+"e:\WORK\VISUALC-IN-21-DAYS\day11\day11.cpp"
+"e:\WORK\VISUALC-IN-21-DAYS\day11\day11Doc.cpp"
+"e:\WORK\VISUALC-IN-21-DAYS\day11\day11View.cpp"
+"e:\WORK\VISUALC-IN-21-DAYS\day11\Line.cpp"
+"e:\WORK\VISUALC-IN-21-DAYS\day11\MainFrm.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP1396.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP13A0.TMP" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /Fp"Debug/day11.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"e:\WORK\VISUALC-IN-21-DAYS\day11\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\WINDOWS\TEMP\RSP13A0.TMP" 
+Creating temporary file "C:\WINDOWS\TEMP\RSP13A1.TMP" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/day11.pdb" /debug /machine:I386 /out:"Debug/day11.exe" /pdbtype:sept 
+".\Debug\ChildFrm.obj"
+".\Debug\day11.obj"
+".\Debug\day11Doc.obj"
+".\Debug\day11View.obj"
+".\Debug\Line.obj"
+".\Debug\MainFrm.obj"
+".\Debug\StdAfx.obj"
+".\Debug\day11.res"
+]
+Creating command line "link.exe @C:\WINDOWS\TEMP\RSP13A1.TMP"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+ChildFrm.cpp
+day11.cpp
+day11Doc.cpp
+day11View.cpp
+Line.cpp
+MainFrm.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+day11.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
