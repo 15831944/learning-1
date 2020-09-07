@@ -7,7 +7,7 @@
  */
 
 #include <sys/types.h>
-#include "../common/hdr.h"
+#include "../../common/hdr.h"
 #include "sync.h"
 
 static void test(char *);
@@ -39,6 +39,6 @@ static void test(char *s)
 	setbuf(stdout, NULL);
 	for(pc = s; c=*pc++;) {
 		putc(c,stdout);
-		sleep(1);
+		sleep(0.5);
 	}
 }

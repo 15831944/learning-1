@@ -3,7 +3,7 @@
  * Critical region uninterupted in SRV2, same calls are interrupted and restarted.
  *  Created on: Sep 3, 2020
  *      Author: Gabriel Dimitriu
- *  examples from:UNIX - Gestionarea Processlor by Iosif Ignat and Adrian Kacso
+ *  examples from:UNIX - Gestionarea Proceselor by Iosif Ignat and Adrian Kacso
  */
 
 #include <signal.h>

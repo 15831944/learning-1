@@ -9,10 +9,9 @@
 #ifndef SIGNALS_SYNC_H_
 #define SIGNALS_SYNC_H_
 
-#include <signal.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include "../common/hdr.h"
+#include "../../common/hdr.h"
 
 void config(void);
 

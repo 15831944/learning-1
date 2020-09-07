@@ -8,7 +8,7 @@
  * same data (modified as child).
  *  Created on: Aug 30, 2020
  *      Author: Gabriel Dimitriu
- *  examples from:UNIX - Gestionarea Processlor by Iosif Ignat and Adrian Kacso
+ *  examples from:UNIX - Gestionarea Proceselor by Iosif Ignat and Adrian Kacso
  */
 
 #include <sys/types.h>
