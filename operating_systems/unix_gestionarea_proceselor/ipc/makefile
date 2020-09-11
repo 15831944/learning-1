@@ -6,6 +6,8 @@ all:
 	cd msg && make
 	cd shm && make
 	cd sem && make
+	cd sockets && make
+	cd rpc && make
 clean:
 	cd exec && make clean
 	cd file && make clean
@@ -14,4 +16,6 @@ clean:
 	cd msg && make clean
 	cd shm && make clean
 	cd sem && make clean
+	cd sockets && make clean
+	cd rpc && make clean
 	
