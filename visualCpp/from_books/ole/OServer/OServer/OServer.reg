@@ -1,0 +1,27 @@
+REGEDIT
+; This .REG file may be used by your SETUP program.
+;   If a SETUP program is not available, the entries below will be
+;   registered in your InitInstance automatically with a call to
+;   CWinApp::RegisterShellFileTypes and COleObjectFactory::UpdateRegistryAll.
+
+
+HKEY_CLASSES_ROOT\OServer.Document = OServer.Document
+
+
+HKEY_CLASSES_ROOT\OServer.Document\protocol\StdFileEditing\server = OServer.EXE
+HKEY_CLASSES_ROOT\OServer.Document\protocol\StdFileEditing\verb\0 = &Edit
+HKEY_CLASSES_ROOT\OServer.Document\Insertable =
+HKEY_CLASSES_ROOT\OServer.Document\CLSID = {ed8a3774-e7a3-4c06-87b7-104804f672a8}
+
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8} = OServer.Document
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\DefaultIcon = OServer.EXE,1
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\LocalServer32 = OServer.EXE
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\ProgId = OServer.Document
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\MiscStatus = 32
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\AuxUserType\3 = OServer
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\AuxUserType\2 = OServer
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\Insertable =
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\verb\1 = &Open,0,2
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\verb\0 = &Edit,0,2
+HKEY_CLASSES_ROOT\CLSID\{ed8a3774-e7a3-4c06-87b7-104804f672a8}\InprocHandler32 = ole32.dll
+
