@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="TabExample.h">
+    <ClInclude Include="Print.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -27,10 +27,10 @@
     <ClInclude Include="MainFrm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TabExampleDoc.h">
+    <ClInclude Include="PrintDoc.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="TabExampleView.h">
+    <ClInclude Include="PrintView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -39,51 +39,39 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="CNamePage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="CHobbyPage.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TabExample.cpp">
+    <ClCompile Include="Print.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TabExampleDoc.cpp">
+    <ClCompile Include="PrintDoc.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="TabExampleView.cpp">
+    <ClCompile Include="PrintView.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CNamePage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="CHobbyPage.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TabExample.rc">
+    <ResourceCompile Include="Print.rc">
       <Filter>Resource Files</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\TabExample.rc2">
+    <None Include="res\Print.rc2">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\TabExampleDoc.ico">
+    <Image Include="res\PrintDoc.ico">
       <Filter>Resource Files</Filter>
     </Image>
-    <Image Include="res\TabExample.ico">
+    <Image Include="res\Print.ico">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

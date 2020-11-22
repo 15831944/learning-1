@@ -17,7 +17,12 @@ public:
 
 protected:
 	DECLARE_MESSAGE_MAP()
+	virtual void DoDataExchange(CDataExchange* pDX);
 public:
+	CString m_szAddress;
+	CString m_szCity;
+	CString m_szName;
+	afx_msg void OnChangeEditName();
 };
 
 

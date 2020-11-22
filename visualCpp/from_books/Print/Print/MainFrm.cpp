@@ -4,11 +4,9 @@
 
 #include "pch.h"
 #include "framework.h"
-#include "TabExample.h"
+#include "Print.h"
 
 #include "MainFrm.h"
-#include "CNamePage.h"
-#include "CHobbyPage.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -20,7 +18,6 @@ IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
 	ON_WM_CREATE()
-	ON_COMMAND(ID_VIEW_NAMES, &CMainFrame::OnViewNames)
 END_MESSAGE_MAP()
 
 static UINT indicators[] =
@@ -97,14 +94,3 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 // CMainFrame message handlers
 
-
-
-void CMainFrame::OnViewNames()
-{
-	CPropertySheet numeFoaie(_T("Lista bobby-uri"));
-	CNamePage pgNume;
-	CHobbyPage pgHobby;
-	numeFoaie.AddPage(&pgNume);
-	numeFoaie.AddPage(&pgHobby);
-	numeFoaie.DoModal();
-}

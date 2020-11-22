@@ -20,9 +20,9 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{200BA621-DC8A-4060-87DC-9BCDD1D3D5FE}</ProjectGuid>
+    <ProjectGuid>{F4BC6632-E29B-4379-AFB7-D9D33303B165}</ProjectGuid>
     <Keyword>MFCProj</Keyword>
-    <RootNamespace>TabExample</RootNamespace>
+    <RootNamespace>Print</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -183,20 +183,16 @@
     </ResourceCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="CHobbyPage.h" />
-    <ClInclude Include="CNamePage.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="Print.h" />
+    <ClInclude Include="PrintDoc.h" />
+    <ClInclude Include="PrintView.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="TabExample.h" />
-    <ClInclude Include="TabExampleDoc.h" />
-    <ClInclude Include="TabExampleView.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CHobbyPage.cpp" />
-    <ClCompile Include="CNamePage.cpp" />
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -204,19 +200,19 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="TabExample.cpp" />
-    <ClCompile Include="TabExampleDoc.cpp" />
-    <ClCompile Include="TabExampleView.cpp" />
+    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="PrintDoc.cpp" />
+    <ClCompile Include="PrintView.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="TabExample.rc" />
+    <ResourceCompile Include="Print.rc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\TabExample.rc2" />
+    <None Include="res\Print.rc2" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\TabExample.ico" />
-    <Image Include="res\TabExampleDoc.ico" />
+    <Image Include="res\Print.ico" />
+    <Image Include="res\PrintDoc.ico" />
     <Image Include="res\Toolbar.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
