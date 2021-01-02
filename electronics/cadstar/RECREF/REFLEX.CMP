@@ -1,0 +1,25 @@
+
+.PCB
+
+.REM CREATED BY PCB TRANSFER MK02.6
+.REM ------------------------------
+
+.COM
+
+ALIM   L5130
+CS     L146
+C1     L140
+C2     L151
+C3     L151
+C4     L151
+C5     L151
+D      L142
+L1     L2005
+L2     L144
+R1     L144
+R2     L142
+R3     L144
+T1     L137
+T2     L137
+
+.EOD

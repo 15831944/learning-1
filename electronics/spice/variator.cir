@@ -1,0 +1,31 @@
+*VARIATOR CU COMANDA
+.param pot1 = 1.000k rez1 = 25.000k rez2 = 1      ; *ipsp*
+.INC SCR.CIR
+V1 1 0 SIN(0 220V 50HZ)
+*D6 12 4 D1N757
+V2 12 4 DC 8.2V
+D1 1 5 D6si1p
+D2 4 1 D6SI1P
+D3 4 3 D6SI1P
+D4 3 5 D6SI1P
+Q2 15 14 13 QBC107
+Q3 14 15 11 BC251
+X1 5 13 4 13 SCR
+R7   5    12   {rez1}  ; *ipsp*
+R4   10   16   {rez2}  ; *ipsp*
+R3   5    10   1     ; *ipsp*
+R8   3    0    3     ; *ipsp*
+R5   12   15   160   ; *ipsp*
+R6 15 4 {POT1}
+R9   16   11   {10K-POT1}  ; *ipsp*
+C    16   4    470.000n  ; *ipsp*
+.LIB D:\PSPICE\LIB\QBC107.MOD
+.LIB D:\PSPICE\LIB\BC251.MOD
+*.LIB D:\PSPICE\LIB\BIPOLAR.LIB
+.LIB D:\PSPICE\LIB\D6SI1P.MOD
+*.LIB D:\PSPICE\LIB\DNOM1.LIB
+.op
+*.step lin PARAM pot1          1        9.900k   500       ; *ipsp*
+.probe    ; *ipsp*
+.tran/op 1.000m   .1       0         ; *ipsp*
+.END

@@ -1,0 +1,44 @@
+
+.PCB
+
+.REM CREATED BY PCB TRANSFER MK02.6
+.REM ------------------------------
+
+.CON
+
+.COD 2
+
+.REM TREE    1
+L2       1     C3       1     T1       3     R1       1
+R1       1     R2       1
+
+.REM TREE    2
+L2       2     C4       1
+
+.REM TREE    3
+C4       2     R3       2     T2       2
+
+.REM TREE    4
+ALIM     2     C5       1     L1       1     C1       2
+C1       2     T2       1     T1       1
+
+.REM TREE    5
+R2       2     C5       2     ALIM     1     CS       2
+
+.REM TREE    6
+C2       2     R1       2     D        2     T1       2
+
+.REM TREE    7
+C1       1     L1       2
+
+.REM TREE    8
+L1       3     C2       1
+
+.REM TREE    9
+C3       2     D        1
+
+.REM TREE   10
+T2       3     CS       1     R3       1
+
+
+.EOD

@@ -1,0 +1,45 @@
+
+.PCB
+
+.REM CREATED BY PCB TRANSFER MK02.6
+.REM ------------------------------
+
+.COM
+
+.REF
+
+CI2    L1023
+
+.COM
+
+AFISOR L7114
+B1     L2004
+B2     L2004
+CI1    L1116
+C1     L151
+C2     L140
+LED    L133
+Q      L151
+R1     L144
+R2     L144
+R3     L144
+R4     L144
+R5     L144
+R6     L144
+R7     L144
+R8     L144
+R9     L144
+R10    L144
+R11    L144
+R12    L144
+R13    L144
+R14    L144
+R15    L144
+T1     L136
+T2     L136
+T3     L136
+T4     L136
+T5     L136
+T6     L136
+
+.EOD
