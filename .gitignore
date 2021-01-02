@@ -1,0 +1,9 @@
+.vs
+*.ncb
+*.opt
+*.exe
+*.obj
+*.bak
+*.$$$
+Debug
+Release

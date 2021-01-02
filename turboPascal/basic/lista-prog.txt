@@ -1,0 +1,31 @@
+toate programele care utilizeaza crt trebuie pathcuite cu https://smartcomputerinc.com/tppatch/
+pas001.pas - program simplu de inmultire si afisare
+pas002.pas - declarati de variabile si printarea lor
+pas003.pas - constante cu tip
+pas004.pas - operatii aritmetice tp7 nu accepta overflow in operatii artimetice cu constante ca tp6.0
+pas005.pas - operatii cu intregi
+pas006.pas - sizeof
+pas007.pas - conversii char
+pas008.pas - intrare iesire simpla (vinzare cumparare)
+pas009.pas - corectie la pas008.pas
+pas010.pas - test_ascii cu intrare/iesire
+pas011.pas - media a trei valori introduse de la tastatura
+pas012.pas - varianta a pas011,pas
+pas013.pas - introducerea a trei tipuri diferite in acelasi read
+pas014.pas - atribuiri
+pas015.pas - calcule si conversii integer-real
+pas016.pas - instructiunea if ... angajare
+pas017.pas - if multiplu
+pas018.pas - versiune a pas017.pas
+pas019.pas - test utilizind if
+pas020.pas - versiunea a pas019.pas utilizind case
+pas021.pas - exemplu de utilizare for
+pas022.pas - versiune a pas021.pas
+pas023.pas - versiune pas021.pas cu repeat in loc de for
+pas024.pas - versiunea a pas023.pas cu nr necunoscut de candidati
+pas025.pas - versiunea a pas pas021.pas cu while
+pas026.pas - suma unor numere intregi utilizind for, repeat pentru introducere
+pas027.pas - suma unor numere intregi cu validarea depasirii intregului
+pas028.pas - varianta cu goto a pas026.pas
+pas028.pas - varianta cu halt pentru pas027.pas
+

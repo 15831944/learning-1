@@ -1,0 +1,28 @@
+toate programele care utilizeaza crt trebuie pathcuite cu https://smartcomputerinc.com/tppatch/
+pas001.pas - vinzare utilizind array
+pas002.pas - vizizare cu memorarea codului
+pas003.pas - introducere si printare array
+pas004.pas - versiune a pas003.pas
+pas005.pas - introducere si ordonare array
+pas006.pas - versiune a pas005.pas
+pas007.pas - admitere
+pas008.pas - program fara subprograme - rebuturi
+pas009.pas - versiunea fara procedura
+pas010.pas - versiune pas009.pas cu procedura
+pas011.pas - versiune pas009.pas cu procedura
+pas012.pas - versiune pas009.pas cu procedura
+pas013.pas - versiune pas009.pas cu procedura
+pas014.pas - versiune pas014.pas cu functie
+pas015.pas - procedura de schimb ca functie care nu merge cum ne asteptam
+pas016.pas - procedura de schimb ca functie cu param var
+pas017.pas - lot de rezistente facut cu functii
+pas018.pas - versiune modificata a pas017.pas
+pas019.pas - functie utilizata pentru tabelare
+pas020.pas - gasire unui element
+pas021.pas - versiune modificata pas020.pas
+pas022.pas - cautare binara
+pas023.pas - functie cu parametri fara tip
+pas024.pas - calculul celu mai mare divizor comun a doua numere
+pas025.pas - inversarea unui sir de caractere terminat cu blanc
+pas026.pas - referire anticipata a subprogramelor
+pas027.pas - referire anticipata a subprogramelor partea2
