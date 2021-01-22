@@ -1,0 +1,27 @@
+CC=gcc
+
+VPATH=src
+
+EXECUTABLES=masterc
+OBJECTS=ex1.o ex2.o
+
+all:$(EXECUTABLES)
+
+ex1.o:ex1.c ex.h
+	$(CC) -o ex1.o -c src/ex1.c $(CFLAGS)
+
+ex2.o:ex2.c ex.h
+	$(CC) -o ex2.o -c src/ex2.c $(CFLAGS)
+
+masterc:ex1.o ex2.o master.c
+	$(CC) -fPIC -o masterc src/master.c ex1.o ex2.o $(CFLAGS)
+    
+clean:
+	for object in $(EXECUTABLES);\
+	do \
+		if [ -f $$object ]; then rm $$object; fi; \
+	done
+	for object in $(OBJECTS);\
+	do \
+		if [ -f $$object ]; then rm $$object; fi; \
+	done

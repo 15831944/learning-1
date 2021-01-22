@@ -8,3 +8,9 @@
 Debug
 Release
 *.class
+*.o
+.settings
+.project
+.cproject
+*.so
+*.a
