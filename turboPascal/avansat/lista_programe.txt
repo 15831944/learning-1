@@ -26,3 +26,16 @@ pas024.pas - calculul celu mai mare divizor comun a doua numere
 pas025.pas - inversarea unui sir de caractere terminat cu blanc
 pas026.pas - referire anticipata a subprogramelor
 pas027.pas - referire anticipata a subprogramelor partea2
+pas028.pas - integrala cu parametrii subprograme se compileaza cu "Force far calls"
+pas029.pas - stringuri DA_NU
+pas030.pas - stringuri si ordine
+pas031.pas - inlocuire elemente in string
+pas032.pas - media aritmetica a valorilor dintr-un sir de intregi
+pas033.pas - scrie compact un numar real
+pas034.pas - se tiparesc caracterele din textul formatat
+pas035.pas - parametrii string
+pas036.pas - parametrii string
+pas037.pas - multimi echivalente - crash
+pas038.pas - set character utilizind tipul multime.
+pas039.pas - program de prelucrare melodii utilizind recorduri
+
