@@ -38,4 +38,11 @@ pas036.pas - parametrii string
 pas037.pas - multimi echivalente - crash
 pas038.pas - set character utilizind tipul multime.
 pas039.pas - program de prelucrare melodii utilizind recorduri
-
+pas040.pas - program de creare fisier
+pas041.pas - program de numara melodii
+pas042.pas - proceduri de lucru cu fisere pentru melodii
+pas043.pas - numarat linii dintr-un fisier ca text
+pas044.pas - concatenare fisiere text
+pas045.pas - copierea unui fisier indiferent de modul de organizare
+pas046.pas - tratarea erorilor proceduri fara programe
+pas047.pas - utilizind pointeri in lista inlantuita ... fara program
