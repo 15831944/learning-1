@@ -1,0 +1,12 @@
+Lista cu programele din modul
+ovr1.pas
+ovr2.pas
+testovr.pas - overlay exemplu cu toate in interior nu merge nici cu ele in exterior
+test_inl - test asm in line (crapa)
+atribute.pas - dos file attribute
+tsr - program resident sterge ecranul si afiseaza unui mesaj in care este anuntata 
+	versiunea curenta de sistem de operare dupa care se astepta apasarea unei taste dupa
+	care se va reface starea ecranului (nu merge)
+ecran - programul deseneaza in cela patru pagini un dreptunghi, deseneaza se face pentru scrierea 
+	directa in memoria ecran diminesiunele dreptunghiurilor sunt functie de numarul de pagini
+afis_tex - afisare texte in consola grafica

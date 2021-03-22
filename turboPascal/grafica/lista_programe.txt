@@ -1,0 +1,2 @@
+Lista de programe de grafica
+detgraph - exemplu de detect graph
