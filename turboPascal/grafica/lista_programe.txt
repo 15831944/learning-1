@@ -1,2 +1,10 @@
 Lista de programe de grafica
 detgraph - exemplu de detect graph
+culori - exemplude utilizare culori .. incomplet
+heptagon - deseneaza un heptagon regulat
+aspect - utilizare setAspectRatio ca sa se faca un cerc corect pe ecran
+xorPut - utilizarea procedurii setWriteMode(XorPut) pentru a deplasa un cursor grafic pe ecran.(nu se deplaseaza corect)
+poly - deseneaza un poligon regulat utilizind DrawPoly
+txtinc - text incadrat (nu functioneaza)
+graph01 - program pentru desenarea graficului unei functii
+spiridus - animarea unui spiridus folosind putImage (nu merge)
