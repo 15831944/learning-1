@@ -14,6 +14,8 @@ from starting.ship import Ship
 from starting.bullet import Bullet
 from starting.alien import Alien
 from starting.game_stats import GameStats
+from starting.button import Button
+from starting.scoreboard import Scoreboard
 
 class AlienInvasion:
     """ overall class to manage game assets and bahavior. """
@@ -30,7 +32,10 @@ class AlienInvasion:
         self.bullets = pygame.sprite.Group()
         self.aliens = pygame.sprite.Group()
         self.stats = GameStats(self)
+        self.sb = Scoreboard(self)
         self._create_fleet()
+        #make the play button
+        self.play_button = Button(self,"Play")
         
     def run_game(self):
         """ start the main loop for the game."""
@@ -50,6 +55,11 @@ class AlienInvasion:
         for bullet in self.bullets.sprites():
             bullet.draw_bullet() 
         self.aliens.draw(self.screen)
+        #draw score information
+        self.sb.show_score()
+        #draw the play button if the game is inactive
+        if not self.stats.game_active:
+            self.play_button.draw_button()
         # make the most recently drawn screen visible.
         pygame.display.flip()
         
@@ -78,6 +88,9 @@ class AlienInvasion:
                     sys.exit()
                 elif event.key == pygame.K_SPACE:
                     self._fire_bullet()
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                mouse_pos = pygame.mouse.get_pos()
+                self._check_play_button(mouse_pos)
             elif event.type == pygame.KEYUP:
                 self.ship.moving_left =False
                 self.ship.moving_left = False
@@ -93,11 +106,21 @@ class AlienInvasion:
         
     
     def _check_alien_hit(self):
-        #check for any bullets that hav thti aliens
+        #check for any bullets that have hit aliens
         collisions = pygame.sprite.groupcollide(self.bullets, self.aliens,True,True)
+        if collisions:
+#            self.stats.score += self.settings.alien_points
+            for aliens in collisions.values():
+                self.stats.score += self.settings.alien_points* len(aliens)
+            self.sb.prep_score()
+            self.sb.check_high_score()
         if not self.aliens:
             self.bullets.empty()
             self._create_fleet()
+            self.settings.increase_speed()
+            #increase level
+            self.stats.level += 1
+            self.sb.prep_level()
     
     def _fire_bullet(self):
         """ create a new bullet and add it to the bullets group."""
@@ -152,14 +175,15 @@ class AlienInvasion:
         """the ship has been hit by an alien"""
         if self.stats.ship_left > 0:
             self.stats.ship_left -= 1
+            self.sb.prep_ships()
             self.aliens.empty()
             self.bullets.empty()
             self._create_fleet()
             self.ship.center_ship()
-        
             sleep(0.5)
         else:
             self.stats.game_active = False
+            pygame.mouse.set_visible(True)
     
     def _check_aliens_on_bottom(self):
         """check if any aliens has reached the bottom of the screen."""
@@ -169,6 +193,26 @@ class AlienInvasion:
                 self._ship_hit()
                 break
     
+    def _check_play_button(self, mouse_pos):
+        """ start a new game"""
+        button_clicked = self.play_button.rect.collidepoint(mouse_pos) 
+        if button_clicked and not self.stats.game_active:
+            self.settings.initialize_dynamic_settings()
+            #reset game statistics
+            self.stats.reset_stats()
+            self.stats.game_active = True
+            self.sb.prep_score()
+            self.sb.prep_level()
+            self.sb.prep_ships()
+            #hide the mouse cursor to not hit by mistake the play button
+            pygame.mouse.set_visible(False)
+            
+            #clean aliens and bullets
+            self.aliens.empty()
+            self.bullets.empty()
+            #create a new fleet and ship
+            self._create_fleet()
+            self.ship.center_ship()
       
 if __name__ == '__main__':
     # make a game instance, and run the game
