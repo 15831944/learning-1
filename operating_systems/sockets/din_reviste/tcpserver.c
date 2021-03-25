@@ -10,20 +10,14 @@
 #include "inet.h"
 
 char *pname;
-int eroare(char *num,...)
+int eroare(char *value)
 {
-	va_list args;
-	char *fmt;
 	char tampon[256];
 	int len;
-	va_start(args,num);
-
-	fmt = va_arg(args,char *);
-	vsprintf(tampon, fmt, args);
-	va_end(args);
+	sprintf(tampon,"%s", value);
 	len = strlen(tampon);
 	sprintf(tampon + len, " %s",strerror(errno));
-	syslog(LOG_ERR, tampon);
+	fprintf(stderr,"%s\n", tampon);
 	return 1;
 }
 
@@ -33,13 +27,18 @@ int ecou(int dsoclu)
 	char linie[MAXLINIE];
 
 	for(;;) {
+		memset(linie,0,MAXLINIE*sizeof(char));
 		n = citestelinie(dsoclu, linie, MAXLINIE);
 		if (n == 0) /* conexiune terminata */
 			return 0;
-		else if (n < 0)
+		else if (n < 0) {
 			eroare("ecou: eroare la citirea liniei");
-		if (writen(dsoclu, linie, n) != n)
+			return -1;
+		}
+		if (writen(dsoclu, linie, n) != n) {
 			eroare("ecou: eroare la scriere");
+			return -2;
+		}
 	}
 	return 1;
 }
@@ -50,8 +49,10 @@ int main(int argc, char **argv)
 	struct sockaddr_in cliadr, servadr;
 
 	pname = argv[0];
-	if ((dsoclu = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+	if ((dsoclu = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
 		eroare("server: nu pot deschide soclul");
+		exit(-1);
+	}
 	bzero((char *)&servadr, sizeof(servadr));
 	servadr.sin_family = AF_INET;
 	servadr.sin_addr.s_addr = htonl(INADDR_ANY);
@@ -62,15 +63,23 @@ int main(int argc, char **argv)
 	for(;;) {
 		lungcli = sizeof(cliadr);
 		dsoclunou = accept(dsoclu, (struct sockaddr *)&cliadr, &lungcli);
-		if (dsoclunou < 0)
+		if (dsoclunou < 0){
 			eroare("server: eroare la accept");
-		if ((pidcopil = fork()) < 0)
+			close(dsoclu);
+			exit(-1);
+		}
+		if ((pidcopil = fork()) < 0) {
 			eroare("server: eroare la fork");
+			close(dsoclu);
+			exit(-2);
+		}
 		else if (pidcopil == 0) {
 			close(dsoclu);
-			ecou(dsoclunou);
-			exit(0);
+			fprintf(stderr,"socketId = %d\n", dsoclunou);
+			fflush(stderr);
+			if( ecou(dsoclunou) < 0) {
+				exit(0);
+			}
 		}
-		close(dsoclu);
 	}
 }
