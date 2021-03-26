@@ -1,9 +1,16 @@
 CC = gcc
+#openfile and masteropenfile is not working it was ported from BSD from 1990s and is no longer available as is
+OBJECTS = utils.o tcpserver.o tcpclient.o udpserver.o udpclient.o fileutil.o
+EXECUTABLES = tcpserverbin tcpclientbin udpserverbin udpclientbin openfile masteropenfile
 
-OBJECTS = utils.o tcpserver.o tcpclient.o udpserver.o udpclient.o
-EXECUTABLES = tcpserverbin tcpclientbin udpserverbin udpclientbin
-all: $(EXECUTABLES)
+all: $(OBJECTS) $(EXECUTABLES)
 
+masteropenfile: masteropenfile.c fileutil.o
+	$(CC) -fPIC -o masteropenfile masteropenfile.c fileutil.o
+	
+openfile: openfile.c fileutil.o
+	$(CC) -fPIC -o openfile openfile.c fileutil.o
+	
 tcpclientbin: tcpclient.o utils.o
 	$(CC) -fPIC -o tcpclientbin tcpclient.o utils.o
 	
@@ -30,6 +37,9 @@ tcpserver.o: tcpserver.c inet.h
 	
 utils.o: utils.c inet.h
 	$(CC) -fPIC -o utils.o -c utils.c
+
+fileutil.o: fileutil.c openfile.h
+	$(CC) -fPIC -o fileutil.o -c fileutil.c
 
 clean:
 	for object in $(EXECUTABLES);\
