@@ -1,0 +1,26 @@
+#create the environment
+cd project_directory
+python3 -m venv environment_name
+#activate the environment
+source environment_name/bin/activate
+#install django only to this environment
+pip install django
+#start the project
+django-admin startproject project_name .
+#create the database
+python3 manage.py migrate
+#run the server
+python3 manage.py runserver
+
+
+#on another console
+cd project_directory
+#activate the environment
+source environment_name/bin/activate
+#create the application and start it
+python3 manage.py startapp application_name
+python3 manage.py makemigrations application_name
+
+python3 manage.py migrate
+#create the superuser
+python3 manage.py createsuperuser
