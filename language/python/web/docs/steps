@@ -24,3 +24,7 @@ python3 manage.py makemigrations application_name
 python3 manage.py migrate
 #create the superuser
 python3 manage.py createsuperuser
+
+#create the users application
+python3 manage.py startapp users
+
