@@ -1,0 +1,4 @@
+pip3 install python-memcached
+use set/get and memcache.Client(['127.0.0.1:11211'])
+pip3 install redis
+you have to have a redis server to be used
