@@ -1,0 +1,10 @@
+ pip3 install grpcio
+ pip3 install grpcio-tools
+ 
+ you have to write a .proto file and then run grpc_tools.protoc to create python sources
+ pip install dask[complete]
+ dask is similar to spark and is used with scientific packs like NumPy, Pandas and scikit-learn
+ 
+ for aws is pip3 install boto3
+ for docker client is pip3 install docker
+ for kubernetes client is pip3 install kubernetes 

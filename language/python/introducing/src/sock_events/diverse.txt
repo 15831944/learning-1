@@ -1,0 +1,13 @@
+pip3 install scapy
+is used to inspect packages
+zeroMQ is used as sockets on steroids
+pip3 install pyzmq
+
+The standard library contains these email modules:
+smtplib for sending email messages via Simple Mail Transfer Protocol (SMTP)
+email for creating and parsing email messages
+poplib for reading email via Post Office Protocol 3 (POP3)
+imaplib for reading email via Internet Message Access Protocol (IMAP)
+
+pickle  module is used to save and respore any object in a special binary format
+
