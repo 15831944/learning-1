@@ -1,0 +1,4 @@
+ pip3 install pywebview[qt]
+ display the web page in its own window using machine native GUI
+ for windows
+ pip3 install pywebview[cef]

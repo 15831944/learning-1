@@ -1,0 +1,5 @@
+docx to create, reads and write Word 2007 docx files
+python-excel
+oletools  extract data from Office formats
+pyuno library for Open Office files
+python-magic could analize data from a file and gues what format it is
