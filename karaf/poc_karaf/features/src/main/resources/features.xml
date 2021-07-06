@@ -22,4 +22,10 @@
             mvn:io.gdimitriu.poc_karaf/printerclient/${project.version}
         </bundle>
     </feature>
+    <feature name="poc_cxf" version = "${project.version}">
+        <feature version="3.4.3">cxf</feature>
+        <bundle>
+            mvn:io.gdimitriu.poc_karaf/poc_cxf/${project.version}
+        </bundle>
+    </feature>
 </features>
