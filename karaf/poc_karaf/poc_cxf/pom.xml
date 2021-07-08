@@ -5,7 +5,7 @@
     <parent>
         <artifactId>poc_karaf</artifactId>
         <groupId>io.gdimitriu.poc_karaf</groupId>
-        <version>1.0.0.SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -15,8 +15,8 @@
     <properties>
         <maven.compiler.source>13</maven.compiler.source>
         <maven.compiler.target>13</maven.compiler.target>
-        <CXF.version>3.4.3</CXF.version>
-        <jackson.version>2.12.3</jackson.version>
+        <CXF.version>3.3.11</CXF.version>
+        <jackson.version>2.10.5</jackson.version>
         <log4j.version>2.14.1</log4j.version>
     </properties>
 
@@ -114,7 +114,7 @@
             <artifactId>jakarta.activation-api</artifactId>
             <version>2.0.1</version>
         </dependency>
-<!--
+
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-service-description-openapi-v3</artifactId>
@@ -125,14 +125,48 @@
             <artifactId>swagger-ui</artifactId>
             <version>3.49.0</version>
         </dependency>
--->
+        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-integration -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-integration</artifactId>
+            <version>2.0.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/javax.validation/validation-api -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>1.1.0.Final</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-annotations -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+            <version>2.0.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-models -->
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-models</artifactId>
+            <version>2.0.10</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/jakarta.activation/jakarta.activation-api -->
+        <dependency>
+            <groupId>jakarta.activation</groupId>
+            <artifactId>jakarta.activation-api</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.apache.cxf/cxf-common-utilities -->
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-common-utilities</artifactId>
             <version>2.5.11</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+            <version>${CXF.version}</version>
+        </dependency>
         <!-- soap -->
         <dependency>
             <groupId>org.apache.cxf</groupId>
@@ -144,7 +178,13 @@
             <artifactId>cxf-rt-bindings-soap</artifactId>
             <version>${CXF.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-rs-service-description-swagger</artifactId>
+            <version>${CXF.version}</version>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

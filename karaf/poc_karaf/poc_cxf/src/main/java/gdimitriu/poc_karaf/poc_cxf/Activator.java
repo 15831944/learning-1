@@ -14,5 +14,6 @@ public class Activator implements BundleActivator {
     @Override
     public void stop(BundleContext bundleContext) throws Exception {
         server.stop();
+        server = null;
     }
 }
