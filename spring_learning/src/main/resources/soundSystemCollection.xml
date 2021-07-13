@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.2.xsd 
+		http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd 
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-3.2.xsd 
+		http://www.springframework.org/schema/jee 
+		http://www.springframework.org/schema/jee/spring-jee-3.2.xsd 
+		http://www.springframework.org/schema/tx 
+		http://www.springframework.org/schema/tx/spring-tx-3.2.xsd 
+		http://www.springframework.org/schema/task 
+		http://www.springframework.org/schema/task/spring-task-3.2.xsd"> 
+	<!-- configuration details go here -->
+<!--  <bean id="compactDisc" class="first_spring.soundsystem.cdsystems.SgtPeppers" /> -->
+	<bean id="cdPlayer" class="first_spring.soundsystem.mediaplayers.CDPlayer">
+  		<constructor-arg ref="compactDisc"/>
+	</bean>
+	<bean id="compactDisc"
+      class="first_spring.soundsystem.collections.CollectionDisc">
+  		<constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+  		<constructor-arg value="The Beatles" />
+  		<constructor-arg>
+  			<list>
+  				<value>first track</value>
+  				<value>second track</value>
+  				<value>third track</value>
+  			</list>
+  		</constructor-arg>
+	</bean>
+</beans>
