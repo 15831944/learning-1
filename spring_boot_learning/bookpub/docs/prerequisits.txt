@@ -1,0 +1,2 @@
+for tomcat you have to generate the keys
+keytool -genkey -alias tomcat -keyalg RSA

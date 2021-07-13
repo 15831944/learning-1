@@ -1,0 +1,2 @@
+INSERT INTO author (id, first_name, last_name) VALUES (10, 'Shrikrishna', 'Holla')
+INSERT INTO book (id, isbn, title, description, author_id, publisher_id) VALUES (11, '978-1-78398-478-7', 'Orchestrating Docker','Orchestrating Docker', 10, 2)

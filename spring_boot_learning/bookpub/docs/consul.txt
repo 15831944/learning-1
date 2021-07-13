@@ -1,0 +1,27 @@
+download from https://consul.io/downloads.html
+to start consul
+consul agent -server -bootstrap-expect 1 -data-dir d:\temp\consul
+to see the registered members
+consul members
+to create a value
+curl -X PUT -d "From Consul Config" http://localhost:8500/v1/kv/bookpub/my/config/value
+to see a value
+curl http://localhost:8500/v1/kv/bookpub/my/config/value
+to delete a value
+curl -X DELETE http://localhost:8500/v1/kv/bookpub/my/cfig/value
+to modify a value
+curl -X PUT -d "newval" http://localhost:8500/v1/kv/bookpub/my/config/value?cas=20
+
+make a test
+envconsul --once --sanitize --upcase --prefix bookpub env
+
+run the application : first way
+envconsul --once --sanitize --upcase --prefix bookpub .\\gradlew clean bootRun
+
+
+update the property
+curl http://localhost:8500/v1/kv/bookpub/my/config/value
+grep for the ModifyIndex value
+curl -X PUT -d "From UpdatedConsul Config" http://localhost:8500/v1/kv/bookpub/my/config/value?cas=<ModifyIndex Value>
+
+it could be disable using spring.cloud.consul.discovery.enabled=false

@@ -1,0 +1,22 @@
+the eureka discovery service could be disable using: eureka.client.enabled=false
+
+Hystrix:
+
+dashboard  https://github.com/spring-cloud-samples/hystrix-dashboard
+could configure hystrix to use the same executing thread using
+property in application.properties
+hystrix.command.getAllBooks.execution.isolation.strategy=SEMAPHORE
+or
+commandProperties = {
+  @HystrixProperty(name="execution.isolation.strategy",
+                   value="SEMAPHORE")
+}
+
+the default is THREAD
+
+turbine Stream Aggregator for integration across multiple instances which could be visualized using the same dashboard
+https://github.com/Netflix/Turbine
+
+or :
+
+spring-cloud-starter-turbine  and annotated with @EnableTurbine

@@ -1,0 +1,13 @@
+
+    org.springframework.context.ApplicationContextInitializer
+    org.springframework.context.ApplicationListener
+    org.springframework.boot.autoconfigure.AutoConfigurationImportListener
+    org.springframework.boot.autoconfigure.AutoConfigurationImportFilter
+    org.springframework.boot.autoconfigure.template.TemplateAvailabilityProvider
+    org.springframework.boot.SpringBootExceptionReporter
+    org.springframework.boot.SpringApplicationRunListener
+    org.springframework.boot.env.PropertySourceLoader
+    org.springframework.boot.env.EnvironmentPostProcessor
+    org.springframework.boot.diagnostics.FailureAnalyzer
+    org.springframework.boot.diagnostics.FailureAnalysisReporter
+    org.springframework.test.contex.TestExecutionListener

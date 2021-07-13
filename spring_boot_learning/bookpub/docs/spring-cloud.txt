@@ -1,0 +1,8 @@
+@SpringCloudApplication is meta-annotation wraps : @EnableDiscoveryClient and @EnableCircuitBreaker
+@EnableDiscoveyClient this should initialize the descovery client for service registry: it could be : consul, eureka, ZooKeeper
+@EnableCircuitBreaker it could be Hystrix
+ProprietySourceLocator : each integration module, providing ability to load remote configuration, would register an implementing bean
+of this type that expose an implementation of PropertySource that is backed by the integration
+@BootstrapConfiguration is like @ManagementContextConfiguration os a marker annotation geared to identify the key inside
+spring.factories. Those are loaded by BootstrapApplicationListener during startup and this tipically point to configuration classes
+which define and expose PropertySourceLocator.
