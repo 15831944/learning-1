@@ -6,10 +6,20 @@ import java.util.List;
 
 public class Duck implements Comparable<Duck> {
     private String name;
+    private int weight;
     public Duck(String name) {
         this.name = name;
     }
     public String toString() {
+        return name;
+    }
+    public int getWeight() {
+        return weight;
+    }
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+    public String getName() {
         return name;
     }
     public int compareTo(Duck d) {
