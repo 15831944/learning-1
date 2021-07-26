@@ -9,6 +9,22 @@ Examples and tests for differnt books related to IPC, thread and process in UNIX
 
 Kafka proof of concept initialy was a standalone repository named poc_kafka.
 
+# poc_kakfa_spring
+
+Proof of concept using spring kafka to see if it could handle the other project with dinamic creation
+of the topics.
+
+# karaf
+
+Proof of concept for karaf 4.3.2 with cxf 3.3.11 with java 13.
+
+
+# Java 8 certification OCJA and OCJP examples
+
+Different example for java certification usually from ocp-oracle-certified and oca-oracle-certified.
+
+[java_certification](languages/java/certification/README.md)
+
 
 # poc_datastore
 
@@ -48,4 +64,5 @@ C++ examples from Turbo C++ by Octavian Catrina and Iuliana Cojocaru, Teora ISBN
 # turboPascal
 
 Pascal examples from TurboPascal 6.0 By Valentin Cristea, Irina Athanasiu, Eugenia Kalisz and Alexandru Panoiu, Teora 1992, ISBN 973-601-010-4
+
 
