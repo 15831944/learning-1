@@ -23,7 +23,7 @@ Proof of concept for karaf 4.3.2 with cxf 3.3.11 with java 13.
 
 Different example for java certification usually from ocp-oracle-certified and oca-oracle-certified.
 
-[java_certification](languages/java/certification/README.md)
+[java_certification](language/java/certification/README.md)
 
 
 # poc_datastore
