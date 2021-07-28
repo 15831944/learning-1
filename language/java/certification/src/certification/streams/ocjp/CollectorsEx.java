@@ -48,7 +48,7 @@ public class CollectorsEx {
         mapISS = animalsStream.collect(Collectors.groupingBy(String::length,TreeMap::new, Collectors.toSet()));
         System.out.println(mapISS); ///{5=[lions,bears],6=[tigers]}
         System.out.println(mapISS.getClass()); //TreeMap
-        
+
         animalsStream = animals.stream();
         mapILS = animalsStream.collect(Collectors.groupingBy(String::length,TreeMap::new, Collectors.toList()));
         System.out.println(mapILS); ///{5=[lions,bears],6=[tigers]}
