@@ -1,4 +1,4 @@
-package exceptions.ocjp;
+package exceptions.ocjp.autocloseabble;
 
 public class TurkeyCage implements AutoCloseable{
     public void close() throws Exception{

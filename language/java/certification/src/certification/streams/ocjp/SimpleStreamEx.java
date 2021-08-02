@@ -1,4 +1,4 @@
-package streams.ocjp;
+package certification.streams.ocjp;
 
 import java.util.*;
 import java.util.function.BinaryOperator;

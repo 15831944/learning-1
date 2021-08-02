@@ -1,4 +1,4 @@
-package design.interfaces;
+package certification.design.interfaces;
 
 public interface Run extends  Walk {
     public abstract boolean canHuntWhileRunning();

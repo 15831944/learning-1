@@ -1,4 +1,4 @@
-package design.interfaces.polymorphism;
+package certification.design.interfaces.polymorphism;
 
 public class Lemur extends Primate implements  HasTail{
     public int age = 10;

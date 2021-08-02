@@ -1,4 +1,4 @@
-package genericscollections.generics;
+package certification.genericscollections.generics;
 
 public class UseGenerics {
     public static void main(String...args) {

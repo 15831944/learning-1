@@ -1,4 +1,4 @@
-package genericscollections.generics;
+package certification.genericscollections.generics;
 
 /*
  * E is for element

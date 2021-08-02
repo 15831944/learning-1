@@ -1,4 +1,4 @@
-package datetime.ocjp;
+package certification.datetime.ocjp;
 
 import java.time.*;
 import java.time.temporal.ChronoUnit;

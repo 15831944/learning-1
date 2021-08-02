@@ -1,4 +1,4 @@
-package design.interfaces;
+package certification.design.interfaces;
 
 public interface Walk {
     boolean isQuadruped();

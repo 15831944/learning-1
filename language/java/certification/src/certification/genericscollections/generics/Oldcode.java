@@ -1,4 +1,4 @@
-package genericscollections.generics;
+package certification.genericscollections.generics;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package ocjpetc;
+package certification.ocjpetc;
 
 public class UsTaxCode {
     public String toString() {

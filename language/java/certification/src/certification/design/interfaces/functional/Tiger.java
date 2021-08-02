@@ -1,4 +1,4 @@
-package design.interfaces.functional;
+package certification.design.interfaces.functional;
 
 public class Tiger implements Sprint{
     public void sprint(Animal animal) {

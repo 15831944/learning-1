@@ -1,4 +1,4 @@
-package design.interfaces;
+package certification.design.interfaces;
 
 public interface Fly {
     public int getWingSpan() throws Exception;

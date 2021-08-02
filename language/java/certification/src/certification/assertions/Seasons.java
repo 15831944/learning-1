@@ -1,2 +1,5 @@
-package assertions;public enum Seasons {
+package certification.assertions;
+
+public enum Seasons {
+    SPRING,SUMMER,FALL
 }

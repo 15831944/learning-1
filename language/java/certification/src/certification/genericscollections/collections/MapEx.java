@@ -1,4 +1,4 @@
-package genericscollections.collections;
+package certification.genericscollections.collections;
 
 import java.util.HashMap;
 import java.util.Map;
