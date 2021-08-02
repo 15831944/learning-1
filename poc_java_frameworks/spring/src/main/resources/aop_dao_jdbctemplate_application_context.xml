@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        /schema/beans
+         http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jee
+        http://www.springframework.org/schema/jee/spring-jee.xs
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="aop.xmlbased"/>
+    <bean id="dataSource"
+          class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/bookDb"/>
+        <property name="username" value="chappy"/>
+        <property name="password" value="12345678"/>
+    </bean>
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    <bean id="loggingAspect" class="aop.xmlbased.aspects.MyLoggingAspect"/>
+    <aop:config>
+        <aop:aspect id="myLogger" ref="loggingAspect">
+            <aop:pointcut id="pointCut1"
+                          expression="execution(* aop.xmlbased.dao.BookDAO.addBook(aop.xmlbased.beans.Book))"/>
+            <aop:pointcut id="allMethodsPointcut" expression="execution(* aop.xmlbased.dao.BookDAO.*(..))"/>
+            <aop:before method="beforeAdvise" pointcut-ref="pointCut1"/>
+            <aop:after method="afterAdvise" pointcut-ref="allMethodsPointcut"/>
+            <aop:after-returning method="returnAdvise" pointcut-ref="allMethodsPointcut" returning="val"/>
+            <aop:around method="aroundAdvise" pointcut-ref="pointCut1"/>
+            <aop:after-throwing method="throwingAdvise" pointcut-ref="pointCut1" throwing="exception"/>
+        </aop:aspect>
+    </aop:config>
+</beans>

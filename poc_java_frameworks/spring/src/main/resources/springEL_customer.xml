@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="cust_new1" class="learning.springEL.beans.Customer">
+        <property name="cust_name" value="John"/>
+        <property name="cust_id" value="#{2}"/>
+        <property name="prod_name" value="#{'Samsung Fridge'}"/>
+        <property name="prod_price" value="#{200.22}"/>
+        <property name="second_handed" value="#{false}"/>
+    </bean>
+    <bean id="cust_address" class="learning.springEL.beans.Address">
+        <property name="build_no" value="2"/>
+        <property name="city_name" value="Denver"/>
+        <property name="pin_code" value="123"/>
+    </bean>
+    <bean id="cust_withRef" class="learning.springEL.beans.Customer">
+        <property name="cust_name" value="John"/>
+        <property name="cust_id" value="#{2}"/>
+        <property name="prod_name" value="#{'Samsung Fridge'}"/>
+        <property name="prod_price" value="#{200.22}"/>
+        <property name="second_handed" value="#{false}"/>
+        <property name="address" value="#{cust_address}"/>
+    </bean>
+    <bean id="cust_withRef_1" class="learning.springEL.beans.Customer">
+        <property name="cust_name" value="#{cust_withRef.cust_name.toUpperCase()}"/>
+        <property name="cust_id" value="#{cust_withRef.cust_id}"/>
+        <property name="address" value="#{cust_address}"/>
+    </bean>
+    <bean id="cust_calculation" class="learning.springEL.beans.Customer">
+        <property name="cust_name" value="Smith"/>
+        <property name="cust_id" value="#{3}"/>
+        <property name="prod_name" value="#{'Samsung Fridge'}"/>
+        <property name="prod_price" value="#{200.30*4}"/>
+        <property name="second_handed" value="#{cust_calculation.prod_price eq 0}"/>
+        <!-- don't work because prod_price coudl be assigned after the evaluation -->
+    </bean>
+</beans>

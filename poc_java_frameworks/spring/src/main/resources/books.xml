@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id = "book1" class="learning.collections.beans.Book">
+        <property name="isbn" value="20Novel"/>
+        <property name="book_name" value="princess Sinderella"/>
+        <property name="price" value="300"/>
+        <property name="publication"  value="Packt-Pub"/>
+    </bean>
+    <bean id = "book2" class="learning.collections.beans.Book">
+        <constructor-arg value="Java490"/>
+        <constructor-arg value="Core Java"/>
+        <constructor-arg value="300"/>
+        <constructor-arg value="Packt-Pub"/>
+        <property name="props">
+            <props>
+                <prop key="pages">200</prop>
+                <prop key="chapters">10</prop>
+            </props>
+        </property>
+    </bean>
+
+    <bean id ="book3" class="learning.collections.beans.Book"
+          p:isbn="200Autobiography"
+          p:book_name="Playing it in my way"
+          p:price="200"
+          p:publication="Pack-Pub">
+    </bean>
+    <bean id="library_list" class="learning.collections.beans.Library_List">
+        <property name="books">
+            <util:list>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+                <ref bean="book2"/>
+            </util:list>
+        </property>
+    </bean>
+    <bean id="library_set" class="learning.collections.beans.Library_Set">
+        <property name="books">
+            <set>
+                <ref bean="book1"/>
+                <ref bean="book2"/>
+                <ref bean="book3"/>
+            </set>
+        </property>
+    </bean>
+    <bean id="library_map" class="learning.collections.beans.Library_Map">
+        <property name="books">
+            <map>
+                <entry key="20Novel" value-ref= "book1"/>
+                <entry key="200Autobiography" value-ref="book3"/>
+                <entry key="Java490" value-ref="book2"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="library_maplist" class="learning.collections.beans.Library_MapList">
+        <property name="library">
+            <map>
+                <entry key="20Novel">
+                    <list>
+                        <ref bean="book1"/>
+                        <ref bean="book2"/>
+                    </list>
+                </entry>
+                <entry key="200Autobiography">
+                    <list>
+                        <ref bean="book2"/>
+                        <ref bean="book3"/>
+                    </list>
+                </entry>
+                <entry key="Java490">
+                    <list>
+                        <ref bean="book3"/>
+                        <ref bean="book2"/>
+                    </list>
+                </entry>
+            </map>
+        </property>
+    </bean>
+</beans>

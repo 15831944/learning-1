@@ -1,0 +1,1 @@
+package javalin.javamagazine;
