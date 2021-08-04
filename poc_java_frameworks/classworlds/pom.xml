@@ -10,12 +10,9 @@
     <modules>
         <module>server</module>
         <module>client</module>
-<<<<<<< HEAD
         <module>service</module>
         <module>tutorial</module>
         <module>client2</module>
-=======
->>>>>>> 7a42256d993cc9812866185797ffbfff9f2cd09f
     </modules>
     <packaging>pom</packaging>
     <properties>
