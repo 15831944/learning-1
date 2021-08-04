@@ -48,7 +48,7 @@
                         <artifactItem>
                             <outputDirectory>${project.build.directory}/../../server/target/lib/ext</outputDirectory>
                             <groupId>org.example.classworlds</groupId>
-                            <artifactId>service</artifactId>
+                            <artifactId>server</artifactId>
                             <type>jar</type>
                             <version>1.0-SNAPSHOT</version>
                         </artifactItem>

@@ -1,4 +1,4 @@
-package service;
+package server;
 
 import java.io.*;
 import java.util.Base64;
