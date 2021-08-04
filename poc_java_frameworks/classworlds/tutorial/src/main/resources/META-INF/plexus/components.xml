@@ -1,0 +1,7 @@
+<component-set>
+    <components>
+        <role>tutorial.Cheese</role>
+        <role-hint>parmesan</role-hint>
+        <implementation>tutorial.ParmesanCheese</implementation>
+    </components>
+</component-set>

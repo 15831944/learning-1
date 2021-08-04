@@ -1,4 +1,4 @@
-package genericscollections.arrays;
+package certification.genericscollections.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;

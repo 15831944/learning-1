@@ -1,4 +1,4 @@
-package patterns.builders.factory;
+package certification.patterns.builders.factory;
 
 public class Fish extends Food{
     public Fish(int quantity) {

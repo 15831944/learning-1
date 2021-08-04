@@ -1,4 +1,4 @@
-package patterns.builders.factory;
+package certification.patterns.builders.factory;
 
 public class Hay extends Food {
     public Hay(int quantity) {

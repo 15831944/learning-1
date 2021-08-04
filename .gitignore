@@ -8,7 +8,7 @@ gradle/
 .cproject
 *.so
 *.a
-
+target/
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,java,visualstudio
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,java,visualstudio
 

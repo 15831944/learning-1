@@ -1,4 +1,4 @@
-package design.interfaces.functional;
+package certification.design.interfaces.functional;
 
 @FunctionalInterface
 public interface Sprint {

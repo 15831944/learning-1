@@ -1,4 +1,4 @@
-package ocjpetc;
+package certification.ocjpetc;
 
 import java.text.NumberFormat;
 import java.text.ParseException;

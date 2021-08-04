@@ -1,4 +1,4 @@
-package genericscollections.comparable;
+package certification.genericscollections.comparable;
 
 import java.util.ArrayList;
 import java.util.Collections;

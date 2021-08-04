@@ -1,4 +1,4 @@
-package ocjpetc;
+package certification.ocjpetc;
 
 import java.util.ListResourceBundle;
 import java.util.Locale;

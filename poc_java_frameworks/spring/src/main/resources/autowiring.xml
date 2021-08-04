@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="userService" class="learning.autowiring.UserService"/>
+    <bean id="accountService" class="learning.autowiring.AccountService" autowire="byName"/>
+    <bean id="emailService" class="learning.autowiring.EmailService"/>
+    <bean id="hrService" class="learning.autowiring.HRService" autowire="byType"/>
+    <bean id="studentService" class="learning.autowiring.StudentService"/>
+    <bean id="examService" class="learning.autowiring.ExamService" autowire="constructor">
+        <constructor-arg value="Science Exam"/>
+    </bean>
+</beans>

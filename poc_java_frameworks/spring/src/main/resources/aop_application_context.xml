@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd"
+        xmlns:aop="http://www.springframework.org/schema/aop">
+    <aop:config>
+        <aop:pointcut id="employeeServiceMethods" expression="execution(* aop.service.EmployeeService.*(..))"/>
+        <aop:pointcut id="hrServiceMethods" expression="execution(void aop.service.HRService.*(..))"/>
+        <aop:pointcut id="hrRetServiceMethods" expression="execution(String aop.service.HRService.*(..))"/>
+        <aop:aspect id="myLogin" ref="loggingAspect">
+            <aop:before pointcut-ref="employeeServiceMethods" method="printStartLog"/>
+            <aop:after pointcut-ref="employeeServiceMethods" method="printEndLog"/>
+            <aop:around pointcut-ref="employeeServiceMethods" method="printAroundLog"/>
+        </aop:aspect>
+        <aop:aspect id="sendMsg" ref="sendMsgAspect">
+            <aop:after-returning pointcut-ref="hrServiceMethods" method="sendMessageOnSuccessExit"/>
+            <aop:after-returning pointcut-ref="hrRetServiceMethods" method="sendMessageOnSuccessExitWithData" returning="retVal"/>
+            <aop:after-throwing pointcut-ref="hrServiceMethods" method="setMessageOnExceptionExit"/>
+        </aop:aspect>
+    </aop:config>
+    <bean id="loggingAspect" class="aop.aspect.LoggingAspect"/>
+    <bean id="employeeService" class="aop.service.EmployeeService"/>
+    <bean id="hrService" class="aop.service.HRService"/>
+    <bean id="sendMsgAspect" class="aop.aspect.SendMessage"/>
+
+</beans>

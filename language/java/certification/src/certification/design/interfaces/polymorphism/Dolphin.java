@@ -1,4 +1,4 @@
-package design.interfaces.polymorphism;
+package certification.design.interfaces.polymorphism;
 
 public class Dolphin implements LiveInOcean{
     public void makeSound() {

@@ -1,4 +1,4 @@
-package patterns.builders.factory;
+package certification.patterns.builders.factory;
 
 public abstract class Food {
     private int quantity;

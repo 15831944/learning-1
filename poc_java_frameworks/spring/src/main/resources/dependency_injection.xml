@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="car_obj" class="learning.lifecycle.beans.Car">
+        <property name="color" value="blue"/>
+        <property name="fuelType" value="petrol"/>
+        <property name="price" value="10000"/>
+        <property name="data" ref="AllLifeCycle"/>
+    </bean>
+
+    <bean id="car_constructor" class="learning.lifecycle.beans.Car">
+        <constructor-arg value="red" index="0"/>
+        <constructor-arg value="diesel" index="1"/>
+        <constructor-arg value="15000" index="2"/>
+        <constructor-arg ref="AllLifeCycle" index="3"/>
+    </bean>
+
+    <bean id="AllLifeCycle" class="learning.lifecycle.beans.AllLifeCycle"
+          init-method="init" destroy-method="destroy"
+          factory-bean="AllLifeCycleFactory" factory-method="buildObject">
+        <property name="serialNumber" value="SR001"/>
+        <property name="location" value="Bucharest"/>
+    </bean>
+    <bean id="AllLifeCycleFactory" class="learning.lifecycle.AllLifeCycleFactory" factory-method="createFactory"/>
+    <bean id="car_namespaces" class="learning.lifecycle.beans.Car"
+          p:color="white" p:price="5000" p:fuelType="diesel" p:data-ref="AllLifeCycle">
+    </bean>
+    <bean id="car_private_constructor_DI" class="learning.lifecycle.beans.Car">
+        <constructor-arg value="red" index="0"/>
+        <constructor-arg value="diesel" index="1"/>
+        <constructor-arg value="15000" index="2"/>
+        <constructor-arg index="3">
+            <bean id="data_private" class="learning.lifecycle.beans.AllLifeCycle" init-method="init"
+                  destroy-method="destroy">
+                <property name="serialNumber" value="SR002"/>
+                <property name="location" value="Bucharest"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+</beans>

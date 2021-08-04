@@ -1,4 +1,4 @@
-package design.interfaces.functional;
+package certification.design.interfaces.functional;
 
 import java.util.function.Predicate;
 
