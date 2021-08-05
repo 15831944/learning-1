@@ -3,7 +3,6 @@ package server;
 import org.codehaus.plexus.classworlds.launcher.Launcher;
 import org.codehaus.plexus.classworlds.realm.ClassRealm;
 import org.codehaus.plexus.classworlds.realm.NoSuchRealmException;
-import service.IService;
 
 import java.io.File;
 import java.io.InputStream;
