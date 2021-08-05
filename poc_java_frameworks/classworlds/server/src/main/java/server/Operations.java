@@ -59,7 +59,7 @@ public class Operations {
         Class<?> loaded = null;
         try {
             if (classStr != null) {
-                loaded = classLoader.loadClass("server.TestService");
+                loaded = classLoader.loadClass("service.TestService");
                 if (loaded != null) {
                     IService service = (IService) loaded.getConstructor().newInstance();
                     if (service != null)
@@ -152,7 +152,7 @@ public class Operations {
         classLoader.addClassLoader(orig);
         Thread.currentThread().setContextClassLoader(classLoader);
         try {
-            Class<?> loaded = classLoader.loadClass("server.TestService");
+            Class<?> loaded = classLoader.loadClass("service.TestService");
             if (loaded != null) {
                 IService service = (IService) loaded.getConstructor().newInstance();
                 if (service != null)
