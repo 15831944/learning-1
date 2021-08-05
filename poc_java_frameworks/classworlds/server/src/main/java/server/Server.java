@@ -6,7 +6,9 @@ import org.codehaus.plexus.classworlds.realm.ClassRealm;
 import org.codehaus.plexus.classworlds.realm.NoSuchRealmException;
 
 import java.io.InputStream;
+import java.lang.reflect.Method;
 import java.net.URL;
+import java.util.Arrays;
 
 public class Server {
     private final ClassWorld world;
@@ -49,8 +51,14 @@ public class Server {
             return;
         }
         try {
-            Thread.currentThread().setContextClassLoader(realm);
-            op = (Operations) realm.loadClass("server.Operations").getDeclaredConstructor().newInstance();
+            CustomClassLoader classLoader = new CustomClassLoader(realm);
+            classLoader.addClassLoader(orig);
+            Thread.currentThread().setContextClassLoader(classLoader);
+            Class<?> cls = classLoader.loadClass("server.Operations");
+            Object obj = cls.getDeclaredConstructor().newInstance();
+            op = (Operations) obj;
+//            Method method =obj.getClass().getMethod("runAll");
+//            method.invoke(obj);
         } catch (Throwable e) {
             e.printStackTrace();
         }
@@ -67,8 +75,8 @@ public class Server {
         server.runWithExternal();
     }
     public void runWithExternal() {
-        opWithExternal.runAll();
-        op.testRealm();
+//        opWithExternal.runAll();
+//        op.testRealm();
     }
 
     public void runOperations() {

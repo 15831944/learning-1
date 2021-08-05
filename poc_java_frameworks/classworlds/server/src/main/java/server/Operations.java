@@ -4,7 +4,6 @@ import org.codehaus.plexus.classworlds.launcher.Launcher;
 import org.codehaus.plexus.classworlds.realm.ClassRealm;
 import org.codehaus.plexus.classworlds.realm.NoSuchRealmException;
 import service.IService;
-import service.TestService;
 
 import java.io.File;
 import java.io.InputStream;
@@ -182,9 +181,6 @@ public class Operations {
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        System.out.println("Direct one");
-        IService service  = new TestService();
-        service.printme();
         Thread.currentThread().setContextClassLoader(orig);
     }
 }

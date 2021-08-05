@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service</artifactId>
+    <artifactId>second-api</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <groupId>org.example.classworlds</groupId>
     <properties>
         <maven.compiler.source>13</maven.compiler.source>
@@ -46,9 +47,9 @@
                     <overWriteIfNewer>true</overWriteIfNewer>
                     <artifactItems>
                         <artifactItem>
-                            <outputDirectory>${project.build.directory}/../../server/target/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/../../server/target/lib/ext</outputDirectory>
                             <groupId>org.example.classworlds</groupId>
-                            <artifactId>service</artifactId>
+                            <artifactId>second-api</artifactId>
                             <type>jar</type>
                             <version>1.0-SNAPSHOT</version>
                         </artifactItem>
