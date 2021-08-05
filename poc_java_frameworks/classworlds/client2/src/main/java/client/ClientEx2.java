@@ -1,6 +1,6 @@
 package client;
 
-import server.IService;
+import service.IService;
 
 public class ClientEx2 implements IService {
     public void printme() {

@@ -50,7 +50,7 @@ public class Server {
         }
         try {
             Thread.currentThread().setContextClassLoader(realm);
-            op = new Operations();
+            op = (Operations) realm.loadClass("server.Operations").getDeclaredConstructor().newInstance();
         } catch (Throwable e) {
             e.printStackTrace();
         }

@@ -9,6 +9,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.util.Scanner;
 
 public class OperationsWithExternalLauncher {
     private final ClassWorld world;
@@ -51,14 +52,14 @@ public class OperationsWithExternalLauncher {
         } catch (Throwable e) {
             e.printStackTrace();
         }
-        /*
+
         System.out.println("Replace the client");
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
         while(!str.equals("c")) {
             in.nextLine();
         }
-        */
+
         jar = new JarLoading("./ext/client.jar");
         classStr = jar.getByteCode("client.ClientEx2.class");
         try {
