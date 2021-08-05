@@ -46,7 +46,7 @@
                     <overWriteIfNewer>true</overWriteIfNewer>
                     <artifactItems>
                         <artifactItem>
-                            <outputDirectory>${project.build.directory}/../../server/target/lib</outputDirectory>
+                            <outputDirectory>${project.build.directory}/../../server/target/lib/api</outputDirectory>
                             <groupId>org.example.classworlds</groupId>
                             <artifactId>service</artifactId>
                             <type>jar</type>

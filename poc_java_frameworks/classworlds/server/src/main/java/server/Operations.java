@@ -45,6 +45,13 @@ public class Operations {
             return;
         }
         classLoader.addClassLoader(realm);
+        try {
+            realm = launcher.getWorld().getRealm("app");
+        } catch (NoSuchRealmException e) {
+            e.printStackTrace();
+            return;
+        }
+        classLoader.addClassLoader(realm);
         classLoader.addClassLoader(orig);
         Thread.currentThread().setContextClassLoader(classLoader);
         JarLoading jar = new JarLoading("/home/gaby/public-git/learning/poc_java_frameworks/classworlds/server/target/ext/client.jar");
@@ -77,8 +84,18 @@ public class Operations {
         }
 
         jar = new JarLoading("/home/gaby/public-git/learning/poc_java_frameworks/classworlds/server/target/ext/client.jar");
-        classStr = jar.getByteCode("client.ClientEx2.class");
         try {
+            classStr = jar.getByteCode("client.ClientEx1.class");
+            if (classStr != null) {
+                loaded = classLoader.loadClass("client.ClientEx1", classStr);
+                if (loaded != null) {
+                    IService service = (IService) loaded.getConstructor().newInstance();
+                    if (service != null)
+                        service.printme();
+                }
+            }
+
+            classStr = jar.getByteCode("client.ClientEx2.class");
             if (classStr != null) {
                 loaded = classLoader.loadClass("client.ClientEx2", classStr);
                 if (loaded != null) {
@@ -114,6 +131,13 @@ public class Operations {
             return;
         }
         CustomClassLoader classLoader = new CustomClassLoader(realm);
+        try {
+            realm = launcher.getWorld().getRealm("app");
+        } catch (NoSuchRealmException e) {
+            e.printStackTrace();
+            return;
+        }
+        classLoader.addClassLoader(realm);
         /* wrong class loader  this will not work */
         File file = new File("/home/gaby/public-git/learning/poc_java_frameworks/classworlds/server/target/ext/client.jar");
         try {
@@ -151,8 +175,7 @@ public class Operations {
     public void testRealm() {
         System.out.println("testRealm");
         ClassLoader orig = Thread.currentThread().getContextClassLoader();
-        ClassLoader cl = Thread.currentThread().getContextClassLoader();
-        URL url = cl.getResource ("classworlds.conf");
+        URL url = orig.getResource ("classworlds.conf");
         ClassRealm realm = null;
         Launcher launcher = new Launcher();
 
@@ -165,7 +188,7 @@ public class Operations {
         }
 
         try {
-            realm = launcher.getWorld().getRealm("app.real");
+            realm = launcher.getWorld().getRealm("app");
         } catch (NoSuchRealmException e) {
             e.printStackTrace();
             return;

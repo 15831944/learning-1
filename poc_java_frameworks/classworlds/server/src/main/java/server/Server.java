@@ -51,6 +51,8 @@ public class Server {
         try {
             CustomClassLoader classLoader = new CustomClassLoader(realm);
             classLoader.addClassLoader(orig);
+            realm = launcher.getWorld().getRealm("app");
+            classLoader.addClassLoader(realm);
             Thread.currentThread().setContextClassLoader(classLoader);
             /* this is not needed
             Class<?> cls = classLoader.loadClass("server.Operations");

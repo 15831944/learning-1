@@ -5,7 +5,7 @@ import service.IService;
 
 public class ClientEx1 implements IService, ISecondApi {
     public void printme() {
-        System.out.println("ClientEx1");
+        System.out.println("ClientEx1 in second client");
         implPrint();
     }
 
