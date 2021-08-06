@@ -20,3 +20,7 @@ examples using spring and spring boot
 ##classworlds
 
 classworlds and class loaders in java 13.
+
+it should be run with from target of the server module
+
+java -classpath ./lib/plexus-classworlds-2.6.0.jar -Dclassworlds.conf=./config/classworlds.conf org.codehaus.plexus.classworlds.launcher.Launcher
