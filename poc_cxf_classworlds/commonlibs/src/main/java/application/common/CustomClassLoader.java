@@ -34,6 +34,10 @@ public class CustomClassLoader extends ClassLoader {
 		classLoaders.remove(classLoader);
 	}
 
+	public List<ClassLoader> getClassLoaders() {
+		return classLoaders;
+	}
+
 	/* (non-Javadoc)
 	 * @see java.lang.ClassLoader#loadClass(java.lang.String)
 	 */
