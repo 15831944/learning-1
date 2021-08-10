@@ -14,6 +14,7 @@
         <module>route2</module>
         <module>application</module>
         <module>commonlibs</module>
+        <module>launcher</module>
     </modules>
     <packaging>pom</packaging>
 

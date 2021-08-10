@@ -19,37 +19,16 @@ public class RestServer implements IApplication {
     private OpenApiFeature feature;
     private JAXRSServerFactoryBean restServer;
     private CustomClassLoader customClassLoader;
-    private URLClassLoader fileUpdateClassLoader;
     private Server server;
     private Bus bus;
 
     public RestServer(CustomClassLoader customClassLoader) {
         this.customClassLoader = customClassLoader;
         Thread.currentThread().setContextClassLoader(customClassLoader);
-        fileUpdateClassLoader = null;
     }
 
     @Override
     public void start() {
-        if (fileUpdateClassLoader != null) {
-            customClassLoader.removeClassLoader(fileUpdateClassLoader);
-        }
-        File jarFile = new File("/home/gaby/public-git/learning/poc_cxf_classworlds/application/target/lib/routes/routes.jar");
-        URL url = null;
-        try {
-            url = jarFile.toURI().toURL();
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-            return;
-        }
-        URL[] urls = new URL[]{url};
-        fileUpdateClassLoader = new URLClassLoader(urls);
-
-        CustomClassLoader customClassLoader1 = new CustomClassLoader(fileUpdateClassLoader);
-        for (ClassLoader cls : customClassLoader.getClassLoaders())
-            customClassLoader1.addClassLoader(cls);
-        customClassLoader = customClassLoader1;
-        customClassLoader.addClassLoader(fileUpdateClassLoader);
         Thread.currentThread().setContextClassLoader(customClassLoader);
         restServer = new JAXRSServerFactoryBean();
         bus = CXFBusFactory.getThreadDefaultBus();
@@ -79,7 +58,6 @@ public class RestServer implements IApplication {
             System.out.println("Could not instantiate class");
         }
         restServer.getFeatures().add(feature);
-//        restServer.setProvider(new AuthenticationHandler());
         String hostname = "localhost";
         try {
             hostname = InetAddress.getLocalHost().getCanonicalHostName();

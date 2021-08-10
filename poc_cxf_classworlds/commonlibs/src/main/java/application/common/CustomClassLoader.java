@@ -1,5 +1,6 @@
 package application.common;
 
+import java.io.InputStream;
 import java.util.*;
 
 public class CustomClassLoader extends ClassLoader {
@@ -76,5 +77,22 @@ public class CustomClassLoader extends ClassLoader {
 		Class<?> type = super.defineClass(name, buffer, 0, buffer.length);
 		types.put(name,type);
 		return type;
+	}
+
+	@Override
+	public InputStream getResourceAsStream(String resource) {
+		InputStream retValue = null;
+		//load the class from parent classloader
+
+		retValue = 	super.getResourceAsStream(resource);
+		if (retValue != null)
+			return retValue;
+
+		for (ClassLoader classLoader : classLoaders) {
+			retValue = classLoader.getResourceAsStream(resource);
+			if (retValue != null)
+				return retValue;
+		}
+		return null;
 	}
 }
