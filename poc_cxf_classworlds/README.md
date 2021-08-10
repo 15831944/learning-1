@@ -1,5 +1,7 @@
 # poc of CXF using REST on classworlds and dynamic routes
 
+This is compile and run with java 13 without modules.
+
 Replace /home/gaby/public-git/learning/poc_cxf_classworlds everywhere it is in the 
 code or file with the location where the project has been checkout.
 

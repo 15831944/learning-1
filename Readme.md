@@ -18,6 +18,11 @@ of the topics.
 
 Proof of concept for karaf 4.3.2 with cxf 3.3.11 with java 13.
 
+# poc_cxf_classworlds
+
+Example of CXF REST API in classworlds using dynamic routes with java 13 without modules.
+
+[poc_cxf_classworlds](poc_cxf_classworlds/README.md)
 
 # Java 8 certification OCJA and OCJP examples
 
