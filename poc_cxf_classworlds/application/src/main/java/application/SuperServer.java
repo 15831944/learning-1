@@ -22,7 +22,7 @@ public class SuperServer {
     public void start() {
         application = new RESTApplication(world);
         application.start();
-        System.out.println("Replace the route");
+        System.out.println("Replace the route and then press r");
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();
         while(!str.equals("r")) {
