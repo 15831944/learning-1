@@ -11,7 +11,7 @@ Kafka proof of concept initialy was a standalone repository named poc_kafka.
 
 # poc_kakfa_spring
 
-Proof of concept using spring kafka to see if it could handle the other project with dinamic creation
+Proof of concept using spring kafka to see if it could handle the other project with dynamic creation
 of the topics.
 
 # karaf
