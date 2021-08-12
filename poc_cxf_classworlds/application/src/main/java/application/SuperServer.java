@@ -39,15 +39,6 @@ public class SuperServer {
             e.printStackTrace();
         }
         application = new RESTApplication(world, server);
-/*  this has been moved to jmx connection
-        application.start();
-        System.out.println("Replace the route and then press r");
-        Scanner in = new Scanner(System.in);
-        String str = in.nextLine();
-        while(!str.equals("r")) {
-            in.nextLine();
-        }
-        application.reconfigure(); */
         System.out.println("Press s to stop");
         Scanner in = new Scanner(System.in);
         String str = in.nextLine();

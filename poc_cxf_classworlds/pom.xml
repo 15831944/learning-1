@@ -15,6 +15,7 @@
         <module>application</module>
         <module>commonlibs</module>
         <module>launcher</module>
+        <module>client</module>
     </modules>
     <packaging>pom</packaging>
 

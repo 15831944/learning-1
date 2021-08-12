@@ -9,10 +9,8 @@ import org.codehaus.plexus.classworlds.realm.ClassRealm;
 import org.codehaus.plexus.classworlds.realm.NoSuchRealmException;
 
 import javax.management.*;
-import java.io.File;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
@@ -42,8 +40,7 @@ public class RESTApplication implements IApplicationMXBean, IApplication {
 
         Launcher launcher = new Launcher();
 
-        try {
-            InputStream is = url.openStream();
+        try (InputStream is = url.openStream()){
             launcher.configure(is);
         } catch (Throwable e) {
             e.printStackTrace();
@@ -64,12 +61,6 @@ public class RESTApplication implements IApplicationMXBean, IApplication {
             e.printStackTrace();
             return;
         }
-//        try {
-//            realm.addURL(new File("/home/gaby/public-git/learning/poc_cxf_classworlds/application/target/lib/routes/routes.jar").toURI().toURL());
-//        } catch (MalformedURLException e) {
-//            e.printStackTrace();
-//            return;
-//        }
         realm.setParentClassLoader(realmApplication);
         CustomClassLoader classLoader = new CustomClassLoader();
         classLoader.addClassLoader(realm);
