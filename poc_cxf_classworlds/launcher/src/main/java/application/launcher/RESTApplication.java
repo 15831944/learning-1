@@ -102,7 +102,9 @@ public class RESTApplication implements IApplicationMXBean, IApplication {
 
     @Override
     public void stop() {
-        application.stop();
+        if (application != null){
+            application.stop();
+        }
         Thread.currentThread().setContextClassLoader(origClassloader);
     }
 }
