@@ -1,12 +1,14 @@
 package application.launcher;
 
 import application.api.IApplication;
+import application.api.IApplicationMXBean;
 import application.common.CustomClassLoader;
 import org.codehaus.plexus.classworlds.ClassWorld;
 import org.codehaus.plexus.classworlds.launcher.Launcher;
 import org.codehaus.plexus.classworlds.realm.ClassRealm;
 import org.codehaus.plexus.classworlds.realm.NoSuchRealmException;
 
+import javax.management.*;
 import java.io.File;
 import java.io.InputStream;
 import java.lang.reflect.InvocationTargetException;
@@ -14,7 +16,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Arrays;
 
-public class RESTApplication implements IApplication {
+public class RESTApplication implements IApplicationMXBean, IApplication {
 
     private ClassWorld world;
 
@@ -22,13 +24,20 @@ public class RESTApplication implements IApplication {
 
     private  ClassLoader origClassloader;
 
-    public RESTApplication(ClassWorld world) {
+    public RESTApplication(ClassWorld world, MBeanServer jmxServer) {
         this.world = world;
+        origClassloader = Thread.currentThread().getContextClassLoader();
+        try {
+            ObjectName objectName = new ObjectName("application.server:type=basic,name=restServer");
+            jmxServer.registerMBean(this, objectName);
+        } catch (MalformedObjectNameException | InstanceAlreadyExistsException | MBeanRegistrationException | NotCompliantMBeanException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void start() {
-        origClassloader = Thread.currentThread().getContextClassLoader();
+        Thread.currentThread().setContextClassLoader(origClassloader);
         URL url = origClassloader.getResource ("classworlds.conf");
 
         Launcher launcher = new Launcher();

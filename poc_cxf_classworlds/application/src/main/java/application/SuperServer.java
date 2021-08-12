@@ -4,6 +4,8 @@ import application.api.IApplication;
 import application.launcher.RESTApplication;
 import org.codehaus.plexus.classworlds.ClassWorld;
 
+import javax.management.*;
+import java.lang.management.ManagementFactory;
 import java.util.Scanner;
 
 public class SuperServer {
@@ -20,7 +22,9 @@ public class SuperServer {
         superServer.start();
     }
     public void start() {
-        application = new RESTApplication(world);
+        MBeanServer server = ManagementFactory.getPlatformMBeanServer();
+        application = new RESTApplication(world, server);
+/*  this has been moved to jmx connection
         application.start();
         System.out.println("Replace the route and then press r");
         Scanner in = new Scanner(System.in);
@@ -28,10 +32,10 @@ public class SuperServer {
         while(!str.equals("r")) {
             in.nextLine();
         }
-        application.reconfigure();
+        application.reconfigure(); */
         System.out.println("Press s to stop");
-        in = new Scanner(System.in);
-        str = in.nextLine();
+        Scanner in = new Scanner(System.in);
+        String str = in.nextLine();
         while(!str.equals("s")) {
             in.nextLine();
         }

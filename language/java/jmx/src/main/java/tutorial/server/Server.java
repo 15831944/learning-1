@@ -1,4 +1,4 @@
-package tutorial.jmx;
+package tutorial.server;
 
 import javax.management.*;
 import java.lang.management.ManagementFactory;
@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Server {
     public static void main(String...args) {
         try {
-            ObjectName objectName = new ObjectName("tutorial.jmx:type=basic,name=game");
+            ObjectName objectName = new ObjectName("tutorial.server:type=basic,name=game");
             MBeanServer server = ManagementFactory.getPlatformMBeanServer();
             server.registerMBean(new Game(), objectName);
         } catch (MalformedObjectNameException | InstanceAlreadyExistsException | MBeanRegistrationException | NotCompliantMBeanException e) {

@@ -1,4 +1,4 @@
-package tutorial.jmx.api;
+package tutorial.server.api;
 
 public interface GameMXBean {
     void playFootball(String clubName);

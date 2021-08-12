@@ -1,6 +1,6 @@
-package tutorial.jmx;
+package tutorial.server;
 
-import tutorial.jmx.api.GameMXBean;
+import tutorial.server.api.GameMXBean;
 
 public class Game implements GameMXBean {
     private String playerName;
