@@ -1,4 +1,4 @@
-package certification.iostreams;
+package certification.io.streams;
 
 /** Subclasses ByteArrayOutputStream to give access to the internal raw buffer. */
 public class ByteArrayOutputStream2 extends java.io.ByteArrayOutputStream {

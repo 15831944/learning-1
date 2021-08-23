@@ -1,7 +1,7 @@
 /**
  * 
  */
-package certification.iostreams;
+package certification.io.streams;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
